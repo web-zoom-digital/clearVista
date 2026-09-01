@@ -10,7 +10,7 @@ const audienceCards = [
     label: 'I\'m a Homeowner',
     hint: 'Find windows & doors for your home',
     href: '/windows',
-    image: 'https://images.unsplash.com/photo-1591474200742-8e512e6f98f8?w=600&q=80',
+    image: '/images/who-homeowner.jpg',
     color: '#0057B8',
   },
   {
@@ -18,7 +18,7 @@ const audienceCards = [
     label: 'I\'m an Architect',
     hint: 'Explore technical specs & designs',
     href: '/upc-products',
-    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80',
+    image: '/images/who-architect.jpg',
     color: '#009FE3',
   },
   {
@@ -26,7 +26,7 @@ const audienceCards = [
     label: 'I\'m a Builder',
     hint: 'Bulk orders & project partnerships',
     href: '/contact',
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80',
+    image: '/images/who-builder.jpg',
     color: '#0057B8',
   },
   {
@@ -34,7 +34,7 @@ const audienceCards = [
     label: 'Just Exploring',
     hint: 'Browse our complete collection',
     href: '/upc-products',
-    image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=600&q=80',
+    image: '/images/who-fabricator.jpg',
     color: '#009FE3',
   },
 ];

@@ -9,7 +9,7 @@ const testimonials = [
     name: 'Rajesh Sharma',
     role: 'Homeowner, New Delhi',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80',
+    image: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50" fill="%230057B8"/><text x="50" y="55" font-family="Arial" font-size="40" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">RS</text></svg>',
     quote: "We replaced all 14 windows in our 3BHK with ClearVista uPVC windows. The noise reduction is incredible — we live near a main road and now it's like a different home. Highly recommended!",
 
   },
@@ -18,7 +18,7 @@ const testimonials = [
     name: 'Priya Mehta',
     role: 'Interior Designer, Mumbai',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&q=80',
+    image: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50" fill="%23009FE3"/><text x="50" y="55" font-family="Arial" font-size="40" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">PM</text></svg>',
     quote: 'I\'ve recommended ClearVista to over 30 of my clients. The quality is consistent, delivery is on time, and the installation team is professional. My clients are always happy.',
   },
   {
@@ -26,7 +26,7 @@ const testimonials = [
     name: 'Suresh Kumar',
     role: 'Builder, Bangalore',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80',
+    image: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50" fill="%230A0F1E"/><text x="50" y="55" font-family="Arial" font-size="40" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">SK</text></svg>',
     quote: 'We\'ve been using ClearVista for our residential projects for 5 years. The bulk pricing is competitive and product quality is top-notch. Our buyers specifically ask for ClearVista windows now.',
   },
   {
@@ -34,7 +34,7 @@ const testimonials = [
     name: 'Anita Gupta',
     role: 'Architect, Hyderabad',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80',
+    image: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50" fill="%230057B8"/><text x="50" y="55" font-family="Arial" font-size="40" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">AG</text></svg>',
     quote: 'The custom sizing options and color choices are excellent. ClearVista can match any design brief I give them. The thermal insulation performance is better than anything else I\'ve specified.',
   },
   {
@@ -42,7 +42,7 @@ const testimonials = [
     name: 'Vikram Singh',
     role: 'Homeowner, Pune',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80',
+    image: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50" fill="%23009FE3"/><text x="50" y="55" font-family="Arial" font-size="40" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">VS</text></svg>',
     quote: 'After monsoons last year, not a single drop of water came through. The sliding doors are smooth and the locking mechanism feels premium. Worth every rupee spent.',
   },
 ];

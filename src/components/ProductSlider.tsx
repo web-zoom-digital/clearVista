@@ -5,21 +5,21 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 const bySpaceSlides = [
-  { label: 'Living Room', href: '/windows#living-room', image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=900&q=80' },
-  { label: 'Bedroom', href: '/windows#bedroom', image: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=900&q=80' },
-  { label: 'Kitchen', href: '/windows#kitchen', image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=900&q=80' },
-  { label: 'Bathroom', href: '/windows#bathroom', image: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=900&q=80' },
-  { label: 'Balcony', href: '/windows#balcony', image: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=900&q=80' },
-  { label: 'Office', href: '/windows#office', image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80' },
+  { label: 'Living Room', href: '/windows#living-room', image: '/images/hero-1.jpg' },
+  { label: 'Bedroom', href: '/windows#bedroom', image: '/images/who-homeowner.jpg' },
+  { label: 'Kitchen', href: '/windows#kitchen', image: '/images/project-1.jpg' },
+  { label: 'Bathroom', href: '/windows#bathroom', image: '/images/hero-2.jpg' },
+  { label: 'Balcony', href: '/windows#balcony', image: '/images/project-2.jpg' },
+  { label: 'Office', href: '/windows#office', image: '/images/contact-office.jpg' },
 ];
 
 const byCollectionSlides = [
-  { label: 'Sliding Windows', href: '/windows#sliding', image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80' },
-  { label: 'Casement Windows', href: '/windows#casement', image: 'https://images.unsplash.com/photo-1618219944342-824e40a13285?w=900&q=80' },
-  { label: 'Sliding Doors', href: '/doors#sliding', image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=900&q=80' },
-  { label: 'Swing Doors', href: '/doors#swing', image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=900&q=80' },
-  { label: 'French Doors', href: '/doors#french', image: 'https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?w=900&q=80' },
-  { label: 'Fixed Windows', href: '/windows#fixed', image: 'https://images.unsplash.com/photo-1560448204-603b3fc33ddc?w=900&q=80' },
+  { label: 'Sliding Windows', href: '/windows#sliding', image: '/images/product-window.jpg' },
+  { label: 'Casement Windows', href: '/windows#casement', image: '/images/hero-2.jpg' },
+  { label: 'Sliding Doors', href: '/doors#sliding', image: '/images/hero-1.jpg' },
+  { label: 'Swing Doors', href: '/doors#swing', image: '/images/project-2.jpg' },
+  { label: 'French Doors', href: '/doors#french', image: '/images/project-1.jpg' },
+  { label: 'Fixed Windows', href: '/windows#fixed', image: '/images/hero-3.jpg' },
 ];
 
 function useInView(threshold = 0.15) {

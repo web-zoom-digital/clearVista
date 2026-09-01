@@ -35,6 +35,12 @@ export default function ContactPage() {
           background: 'linear-gradient(135deg, #0A0F1E 0%, #0D1526 100%)',
           padding: '160px 0 80px', position: 'relative', overflow: 'hidden',
         }}>
+          {/* Background office image */}
+          <img
+            src="/images/contact-office.jpg"
+            alt="ClearVista showroom office"
+            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.18 }}
+          />
           <div style={{
             position: 'absolute', inset: 0,
             background: 'radial-gradient(ellipse at 70% 50%, rgba(0,159,227,0.12) 0%, transparent 60%)',
@@ -59,6 +65,7 @@ export default function ContactPage() {
             </p>
           </div>
         </section>
+
 
         {/* Contact Info Cards */}
         <section style={{ padding: '60px 0', background: 'white' }}>

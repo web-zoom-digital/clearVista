@@ -17,7 +17,7 @@ const doors = [
     name: 'Sliding Doors',
     desc: 'Effortlessly gliding uPVC sliding doors that connect indoor and outdoor spaces beautifully. Perfect for balconies and patios.',
     features: ['Smooth glide rollers', 'Fly-mesh integrated', 'Multi-point locking', 'Large panel sizes'],
-    image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80',
+    image: '/images/hero-1.jpg',
     badge: 'Best Seller',
   },
   {
@@ -25,7 +25,7 @@ const doors = [
     name: 'Swing Doors',
     desc: 'Classic inward or outward swinging uPVC doors with premium hardware. Available in single and double leaf options.',
     features: ['360° opening', 'Weather stripping', 'Anti-burglar hinges', 'Custom sizes'],
-    image: 'https://images.unsplash.com/photo-1600607687644-c7f34b5063c7?w=800&q=80',
+    image: '/images/project-2.jpg',
     badge: 'Classic',
   },
   {
@@ -33,7 +33,7 @@ const doors = [
     name: 'French Doors',
     desc: 'Elegant double-leaf French doors that flood rooms with natural light. Perfect for terraces and garden-facing rooms.',
     features: ['Double leaf design', 'Floor-to-ceiling option', 'Multi-glazing', 'Elegant hardware'],
-    image: 'https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?w=800&q=80',
+    image: '/images/project-1.jpg',
     badge: 'Architectural',
   },
   {
@@ -41,7 +41,7 @@ const doors = [
     name: 'Casement Doors',
     desc: 'Hinged uPVC doors offering a traditional appearance with modern performance. Great for internal and external use.',
     features: ['Traditional style', 'Superior sealing', 'Custom colors', 'Low threshold'],
-    image: 'https://images.unsplash.com/photo-1600210492493-0946911123ea?w=800&q=80',
+    image: '/images/hero-2.jpg',
     badge: 'Traditional',
   },
   {
@@ -49,7 +49,7 @@ const doors = [
     name: 'Lift & Slide Doors',
     desc: 'Premium large-format doors with lift-and-slide mechanism for seamless indoor-outdoor living. Available in 6m+ spans.',
     features: ['Extra large spans', 'Effortless operation', 'Triple glazing', 'Premium sealing'],
-    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80',
+    image: '/images/hero-3.jpg',
     badge: 'Premium',
   },
   {
@@ -57,7 +57,7 @@ const doors = [
     name: 'Bi-Fold Doors',
     desc: 'Space-saving accordion-style uPVC doors that fold away to create a wide, unobstructed opening.',
     features: ['Full-width opening', 'Space-saving', 'Multiple panels', 'Smooth folding'],
-    image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&q=80',
+    image: '/images/contact-office.jpg',
     badge: 'Modern',
   },
 ];

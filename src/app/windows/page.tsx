@@ -25,7 +25,7 @@ const windows = [
     name: 'Sliding Windows',
     desc: 'Space-saving horizontal sliding windows ideal for living rooms, bedrooms, and balconies. Smooth glide system with multi-point locking.',
     features: ['Smooth roller system', 'Fly-mesh option', 'Multi-point lock', 'Double glazing available'],
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80',
+    image: '/images/product-window.jpg',
     badge: 'Most Popular',
   },
   {
@@ -33,7 +33,7 @@ const windows = [
     name: 'Casement Windows',
     desc: 'Outward or inward opening windows that provide maximum ventilation. Perfect for kitchens, bathrooms, and study rooms.',
     features: ['360° ventilation', 'Friction stays', 'EPDM gaskets', 'Tilt & turn option'],
-    image: 'https://images.unsplash.com/photo-1618219944342-824e40a13285?w=800&q=80',
+    image: '/images/hero-2.jpg',
     badge: 'Premium',
   },
   {
@@ -41,7 +41,7 @@ const windows = [
     name: 'Fixed/Picture Windows',
     desc: 'Non-operable windows that provide unobstructed views and maximum light. Excellent thermal and sound insulation.',
     features: ['Maximum light', 'No air leakage', 'Custom sizes', 'Triple glazing available'],
-    image: 'https://images.unsplash.com/photo-1560448204-603b3fc33ddc?w=800&q=80',
+    image: '/images/hero-3.jpg',
     badge: 'View Maximizer',
   },
   {
@@ -49,7 +49,7 @@ const windows = [
     name: 'Tilt & Turn Windows',
     desc: 'European-style dual-function windows that tilt inward for ventilation or swing open fully. Extremely versatile.',
     features: ['Dual functionality', 'Safe ventilation', 'Easy cleaning', 'High security'],
-    image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80',
+    image: '/images/who-homeowner.jpg',
     badge: 'European Style',
   },
   {
@@ -57,7 +57,7 @@ const windows = [
     name: 'Bay & Bow Windows',
     desc: 'Projecting windows that add architectural interest and extra space. Creates a beautiful focal point in any room.',
     features: ['Adds floor space', 'Panoramic views', 'Custom angles', 'Premium finish'],
-    image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80',
+    image: '/images/project-2.jpg',
     badge: 'Architectural',
   },
   {
@@ -65,7 +65,7 @@ const windows = [
     name: 'Louver Windows',
     desc: 'Slatted windows that allow maximum airflow while maintaining privacy. Perfect for bathrooms and utility areas.',
     features: ['Maximum ventilation', 'Privacy glass', 'Low maintenance', 'Rust-free'],
-    image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&q=80',
+    image: '/images/project-1.jpg',
     badge: 'Utility',
   },
 ];

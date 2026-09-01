@@ -7,7 +7,7 @@ import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 const slides = [
   {
     id: 1,
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=90',
+    image: '/images/hero-1.jpg',
     badge: 'Premium uPVC Solutions',
     title: 'Let Light In',
     titleAccent: 'Beautifully',
@@ -17,7 +17,7 @@ const slides = [
   },
   {
     id: 2,
-    image: 'https://images.unsplash.com/photo-1618219944342-824e40a13285?w=1920&q=90',
+    image: '/images/hero-2.jpg',
     badge: 'Elegant Doors Collection',
     title: 'Open to New',
     titleAccent: 'Possibilities',
@@ -27,7 +27,7 @@ const slides = [
   },
   {
     id: 3,
-    image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1920&q=90',
+    image: '/images/hero-3.jpg',
     badge: 'Energy Efficient Technology',
     title: 'Built for',
     titleAccent: 'Tomorrow',
@@ -36,6 +36,7 @@ const slides = [
     ctaSecondary: { label: 'About Us', href: '/about' },
   },
 ];
+
 
 export default function HeroSlider() {
   const [current, setCurrent] = useState(0);

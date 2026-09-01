@@ -189,6 +189,65 @@ export default function AboutPage() {
           </div>
         </section>
 
+        {/* Factory & Team Images */}
+        <section style={{ padding: '100px 0', background: 'white' }}>
+          <div className="container">
+            <div style={{ textAlign: 'center', marginBottom: 64 }}>
+              <div className="section-label" style={{ justifyContent: 'center' }}>Behind the Brand</div>
+              <h2 className="text-h2" style={{ marginTop: 12 }}>
+                Our <span className="title-gradient">World-Class</span> Facility
+              </h2>
+              <p style={{ color: '#64748B', marginTop: 16, maxWidth: 500, margin: '16px auto 0' }}>
+                State-of-the-art manufacturing with over 500 skilled professionals dedicated to quality.
+              </p>
+            </div>
+
+            {/* Factory Image */}
+            <div style={{ borderRadius: 24, overflow: 'hidden', marginBottom: 32, boxShadow: '0 20px 60px rgba(0,0,0,0.12)' }}>
+              <img
+                src="/images/about-factory.jpg"
+                alt="ClearVista uPVC manufacturing factory — skilled workers assembling premium window frames"
+                style={{ width: '100%', height: '500px', objectFit: 'cover', display: 'block' }}
+              />
+            </div>
+
+            {/* Two-col below */}
+            <div className="mission-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24, marginTop: 24 }}>
+              {/* Team Image */}
+              <div style={{ borderRadius: 20, overflow: 'hidden', boxShadow: '0 12px 40px rgba(0,0,0,0.08)' }}>
+                <img
+                  src="/images/about-team.jpg"
+                  alt="ClearVista team — architects, engineers and sales professionals"
+                  style={{ width: '100%', height: '340px', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+              {/* Text */}
+              <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '32px 24px', background: '#F0F7FF', borderRadius: 20 }}>
+                <div className="section-label">Our People</div>
+                <h3 style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800, fontSize: '1.8rem', color: '#0057B8', marginTop: 12, marginBottom: 16 }}>
+                  500+ Skilled Professionals
+                </h3>
+                <p style={{ color: '#475569', lineHeight: 1.8, fontSize: '0.95rem', marginBottom: 20 }}>
+                  From architects and engineers to installation experts and customer support — our team is committed to delivering the best experience at every step.
+                </p>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+                  {[
+                    { n: '150+', l: 'Architects on Team' },
+                    { n: '200+', l: 'Installation Experts' },
+                    { n: '50+', l: 'R&D Engineers' },
+                    { n: '100+', l: 'Support Staff' },
+                  ].map((s) => (
+                    <div key={s.l} style={{ background: 'white', borderRadius: 12, padding: '16px', border: '1px solid #DBEAFE' }}>
+                      <div style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800, fontSize: '1.5rem', color: '#009FE3' }}>{s.n}</div>
+                      <p style={{ color: '#64748B', fontSize: '0.8rem', marginTop: 4 }}>{s.l}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA */}
         <section style={{ padding: '80px 0', background: 'var(--color-primary)', textAlign: 'center' }}>
           <div className="container">

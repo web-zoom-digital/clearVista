@@ -7,12 +7,12 @@ import { ArrowRight } from 'lucide-react';
 const categories = ['All', 'Residential', 'Commercial', 'Hospitality'];
 
 const projects = [
-  { id: 1, title: 'Modern Villa, Delhi', category: 'Residential', type: 'Casement Windows + Sliding Doors', image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80', span: 'large' },
-  { id: 2, title: 'Tech Office, Bengaluru', category: 'Commercial', type: 'Floor-to-Ceiling Fixed Windows', image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80', span: 'small' },
-  { id: 3, title: 'Luxury Apartment, Mumbai', category: 'Residential', type: 'Sliding Windows + Swing Doors', image: 'https://images.unsplash.com/photo-1600607687644-c7f34b5063c7?w=800&q=80', span: 'small' },
-  { id: 4, title: 'Boutique Hotel, Goa', category: 'Hospitality', type: 'French Doors + Casement Windows', image: 'https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&q=80', span: 'medium' },
-  { id: 5, title: 'IT Campus, Hyderabad', category: 'Commercial', type: 'Curtain Wall + Sliding Windows', image: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80', span: 'medium' },
-  { id: 6, title: 'Heritage Home Renovation, Jaipur', category: 'Residential', type: 'Custom uPVC Windows', image: 'https://images.unsplash.com/photo-1600210492493-0946911123ea?w=800&q=80', span: 'small' },
+  { id: 1, title: 'Modern Villa, Delhi', category: 'Residential', type: 'Casement Windows + Sliding Doors', image: '/images/hero-2.jpg', span: 'large' },
+  { id: 2, title: 'Tech Office, Bengaluru', category: 'Commercial', type: 'Floor-to-Ceiling Fixed Windows', image: '/images/hero-3.jpg', span: 'small' },
+  { id: 3, title: 'Luxury Apartment, Mumbai', category: 'Residential', type: 'Sliding Windows + Swing Doors', image: '/images/project-1.jpg', span: 'small' },
+  { id: 4, title: 'Boutique Hotel, Goa', category: 'Hospitality', type: 'French Doors + Casement Windows', image: '/images/project-2.jpg', span: 'medium' },
+  { id: 5, title: 'IT Campus, Hyderabad', category: 'Commercial', type: 'Curtain Wall + Sliding Windows', image: '/images/contact-office.jpg', span: 'medium' },
+  { id: 6, title: 'Heritage Home Renovation, Jaipur', category: 'Residential', type: 'Custom uPVC Windows', image: '/images/hero-1.jpg', span: 'small' },
 ];
 
 function useInView(threshold = 0.1) {
