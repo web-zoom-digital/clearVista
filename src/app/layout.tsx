@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import WhatsAppCTA from "@/components/WhatsAppCTA";
+
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.clearvista.in"),
@@ -167,7 +169,11 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <WhatsAppCTA />
+      </body>
+
     </html>
   );
 }

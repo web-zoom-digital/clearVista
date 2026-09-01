@@ -63,7 +63,7 @@ export default function ContactPage() {
         {/* Contact Info Cards */}
         <section style={{ padding: '60px 0', background: 'white' }}>
           <div className="container">
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 20, marginTop: -60, position: 'relative', zIndex: 10 }}>
+            <div className="contact-info-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 20, marginTop: -60, position: 'relative', zIndex: 10 }}>
               {contactInfo.map(({ icon: Icon, label, value, href, desc }) => (
                 <a key={label} href={href} style={{
                   display: 'block', padding: '28px 24px', background: 'white', borderRadius: 16,
@@ -88,7 +88,7 @@ export default function ContactPage() {
         {/* Form + Map */}
         <section style={{ padding: '80px 0', background: 'var(--color-gray-50)' }} id="quote">
           <div className="container">
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 60, alignItems: 'start' }}>
+            <div className="contact-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 60, alignItems: 'start' }}>
               {/* Form */}
               <div>
                 <div className="section-label">Request a Quote</div>

@@ -80,7 +80,7 @@ export default function UPCProductsPage() {
         <section style={{ padding: '80px 0', background: 'white' }}>
           <div className="container">
             {/* Category filter is static in SSR - JS-free progressive enhancement */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 28 }}>
+            <div className="products-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 28 }}>
               {allProducts.map((product) => (
                 <Link key={product.id} href={product.href} style={{ textDecoration: 'none' }}>
                   <div className="product-card" style={{ borderRadius: 16, overflow: 'hidden', border: '1px solid #E2E8F0', height: '100%', display: 'flex', flexDirection: 'column' }}>

@@ -71,9 +71,10 @@ export default function ProjectsGallery({ limit }: { limit?: number }) {
         </div>
 
         {/* Grid */}
-        <div ref={ref} style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20 }}>
+        <div ref={ref} className="projects-gallery-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20 }}>
           {filtered.map((project, i) => (
             <div key={project.id}
+              className={project.span === 'large' ? 'project-card-large' : ''}
               style={{
                 borderRadius: 16, overflow: 'hidden',
                 position: 'relative', cursor: 'pointer',

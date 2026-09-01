@@ -44,7 +44,7 @@ export default function Footer() {
         background: 'linear-gradient(135deg, #0057B8 0%, #009FE3 100%)',
         padding: '60px 0',
       }}>
-        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 32 }}>
+        <div className="container cta-banner-flex" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 24 }}>
           <div>
             <h2 style={{ color: 'white', fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', fontWeight: 800, marginBottom: 8 }}>
               Ready to Transform Your Space?
@@ -74,7 +74,7 @@ export default function Footer() {
 
       {/* Main Footer */}
       <div className="container" style={{ padding: '70px 24px 40px' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', gap: 48, marginBottom: 56 }}>
+        <div className="footer-main-grid" style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', gap: 48, marginBottom: 56 }}>
           {/* Brand Column */}
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 20 }}>
@@ -145,7 +145,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div style={{
+        <div className="footer-bottom-bar" style={{
           borderTop: '1px solid rgba(255,255,255,0.08)',
           paddingTop: 32,
           display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 20,

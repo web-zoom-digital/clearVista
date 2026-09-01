@@ -48,7 +48,7 @@ export default function AboutPage() {
               <span style={{ color: 'rgba(255,255,255,0.25)' }}>›</span>
               <span style={{ color: '#45BBFF', fontSize: '0.85rem', fontWeight: 500 }}>About Us</span>
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }}>
+            <div className="about-hero-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }}>
               <div>
                 <div className="section-label" style={{ color: '#45BBFF' }}>
                   <span style={{ width: 32, height: 2, background: '#45BBFF', borderRadius: 2, display: 'block' }} />
@@ -91,7 +91,7 @@ export default function AboutPage() {
         {/* Mission & Vision */}
         <section style={{ padding: '100px 0', background: 'white' }}>
           <div className="container">
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48 }}>
+            <div className="mission-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48 }}>
               <div style={{ padding: '48px', background: '#F0F7FF', borderRadius: 20, border: '1px solid #DBEAFE' }}>
                 <div style={{ fontSize: '2rem', marginBottom: 20 }}>🎯</div>
                 <h2 style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800, fontSize: '1.5rem', color: '#0057B8', marginBottom: 16 }}>Our Mission</h2>
@@ -117,7 +117,7 @@ export default function AboutPage() {
               <div className="section-label" style={{ justifyContent: 'center' }}>What Drives Us</div>
               <h2 className="text-h2" style={{ marginTop: 12 }}>Our Core <span className="title-gradient">Values</span></h2>
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24 }}>
+            <div className="values-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24 }}>
               {values.map((v) => {
                 const Icon = v.icon;
                 return (

@@ -123,7 +123,7 @@ export default function Testimonials() {
         </div>
 
         {/* Cards */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
+        <div className="testimonials-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
           {visible.map((t, i) => (
             <div key={`${t.id}-${current}`} style={{
               background: 'rgba(255,255,255,0.05)',

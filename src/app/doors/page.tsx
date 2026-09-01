@@ -107,7 +107,7 @@ export default function DoorsPage() {
         {/* Products Grid */}
         <section style={{ padding: '100px 0', background: 'white' }}>
           <div className="container">
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 32 }}>
+            <div className="products-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 32 }}>
               {doors.map((door) => (
                 <div key={door.id} id={door.id} className="product-card" style={{ borderRadius: 16, overflow: 'hidden', border: '1px solid #E2E8F0' }}>
                   <div style={{ aspectRatio: '4/3', overflow: 'hidden', position: 'relative' }}>

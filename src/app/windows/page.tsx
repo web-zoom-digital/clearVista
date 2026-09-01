@@ -115,7 +115,7 @@ export default function WindowsPage() {
         {/* Products Grid */}
         <section style={{ padding: '100px 0', background: 'white' }}>
           <div className="container">
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 32 }}>
+            <div className="products-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 32 }}>
               {windows.map((win) => (
                 <div key={win.id} id={win.id} className="product-card" style={{ borderRadius: 16, overflow: 'hidden', border: '1px solid #E2E8F0' }}>
                   {/* Image */}

@@ -99,7 +99,7 @@ export default function WhyChooseUs() {
       {/* Stats Section */}
       <section style={{ background: 'var(--color-primary)', padding: '70px 0' }}>
         <div className="container">
-          <div ref={statsRef} style={{
+          <div ref={statsRef} className="stats-hero-grid" style={{
             display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24,
           }}>
             {stats.map((stat, i) => (
@@ -109,7 +109,7 @@ export default function WhyChooseUs() {
                 opacity: statsInView ? 1 : 0,
                 transform: statsInView ? 'translateY(0)' : 'translateY(20px)',
                 transition: `all 0.5s ease ${i * 0.1}s`,
-              }}>
+              }} className="stat-item">
                 <div style={{
                   fontFamily: 'Outfit, sans-serif', fontWeight: 800,
                   fontSize: 'clamp(2.5rem, 4vw, 3.5rem)',
@@ -139,7 +139,7 @@ export default function WhyChooseUs() {
             </p>
           </div>
 
-          <div ref={featuresRef} style={{
+          <div ref={featuresRef} className="features-grid" style={{
             display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 28,
           }}>
             {features.map((feature, i) => {
@@ -184,6 +184,18 @@ export default function WhyChooseUs() {
           </div>
         </div>
       </section>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .stats-hero-grid { grid-template-columns: repeat(2, 1fr) !important; }
+          .stat-item { border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.1); }
+          .features-grid { grid-template-columns: repeat(2, 1fr) !important; }
+        }
+        @media (max-width: 480px) {
+          .features-grid { grid-template-columns: 1fr !important; }
+          .stats-hero-grid { grid-template-columns: repeat(2, 1fr) !important; }
+        }
+      `}</style>
     </>
   );
 }

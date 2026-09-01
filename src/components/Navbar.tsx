@@ -43,29 +43,27 @@ export default function Navbar() {
         id="site-header"
         style={{
           position: 'fixed',
-          top: 0,
-          left: 0,
+          top: 0, left: 0,
           width: '100%',
           zIndex: 1000,
           transition: 'all 0.4s cubic-bezier(0.22, 1, 0.36, 1)',
-          background: scrolled
-            ? 'rgba(255,255,255,0.97)'
-            : 'transparent',
+          background: scrolled ? 'rgba(255,255,255,0.97)' : 'transparent',
           backdropFilter: scrolled ? 'blur(20px)' : 'none',
           borderBottom: scrolled ? '1px solid rgba(0,0,0,0.06)' : 'none',
           boxShadow: scrolled ? '0 2px 20px rgba(0,0,0,0.08)' : 'none',
         }}
       >
-        <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 72 }}>
+        <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 68 }}>
           {/* Logo */}
           <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 10 }}>
             <div style={{
-              width: 36, height: 36,
+              width: 34, height: 34,
               background: 'linear-gradient(135deg, #0057B8, #009FE3)',
               borderRadius: 8,
               display: 'flex', alignItems: 'center', justifyContent: 'center',
+              flexShrink: 0,
             }}>
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                 <rect x="3" y="3" width="8" height="8" rx="1" fill="white" opacity="0.9"/>
                 <rect x="13" y="3" width="8" height="8" rx="1" fill="white" opacity="0.6"/>
                 <rect x="3" y="13" width="8" height="8" rx="1" fill="white" opacity="0.6"/>
@@ -75,7 +73,7 @@ export default function Navbar() {
             <span style={{
               fontFamily: 'Outfit, sans-serif',
               fontWeight: 800,
-              fontSize: '1.4rem',
+              fontSize: '1.3rem',
               color: scrolled ? '#0057B8' : 'white',
               letterSpacing: '-0.02em',
               transition: 'color 0.3s ease',
@@ -85,7 +83,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav style={{ display: 'flex', alignItems: 'center', gap: 4 }} ref={dropdownRef}>
+          <nav className="desktop-nav" style={{ display: 'flex', alignItems: 'center', gap: 4 }} ref={dropdownRef}>
             {navItems.map((item) => (
               <div key={item.label} style={{ position: 'relative' }}
                 onMouseEnter={() => item.children && setActiveDropdown(item.label)}
@@ -114,16 +112,11 @@ export default function Navbar() {
                 {/* Dropdown */}
                 {item.children && (
                   <div style={{
-                    position: 'absolute',
-                    top: '100%',
-                    left: 0,
-                    marginTop: 8,
-                    background: 'white',
-                    borderRadius: 12,
+                    position: 'absolute', top: '100%', left: 0, marginTop: 8,
+                    background: 'white', borderRadius: 12,
                     boxShadow: '0 20px 60px rgba(0,0,0,0.12)',
                     border: '1px solid rgba(0,0,0,0.06)',
-                    padding: '12px 8px',
-                    minWidth: 220,
+                    padding: '12px 8px', minWidth: 220,
                     opacity: activeDropdown === item.label ? 1 : 0,
                     pointerEvents: activeDropdown === item.label ? 'auto' : 'none',
                     transform: activeDropdown === item.label ? 'translateY(0)' : 'translateY(-8px)',
@@ -150,7 +143,7 @@ export default function Navbar() {
           </nav>
 
           {/* Actions */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
             <button
               onClick={() => setSearchOpen(!searchOpen)}
               style={{
@@ -158,16 +151,16 @@ export default function Navbar() {
                 background: scrolled ? 'rgba(0,87,184,0.08)' : 'rgba(255,255,255,0.15)',
                 color: scrolled ? '#0057B8' : 'white',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
-                transition: 'all 0.2s ease',
+                transition: 'all 0.2s ease', flexShrink: 0,
               }}
               aria-label="Search"
             >
               <Search size={18} />
             </button>
 
-            <Link href="/contact" style={{ textDecoration: 'none' }}>
-              <button className="btn btn-primary" style={{ padding: '10px 22px', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: 6 }}>
-                <Phone size={15} />
+            <Link href="/contact" style={{ textDecoration: 'none' }} className="desktop-quote-btn">
+              <button className="btn btn-primary" style={{ padding: '10px 20px', fontSize: '0.88rem', display: 'flex', alignItems: 'center', gap: 6, whiteSpace: 'nowrap' }}>
+                <Phone size={14} />
                 Get Free Quote
               </button>
             </Link>
@@ -180,6 +173,7 @@ export default function Navbar() {
                 background: scrolled ? 'rgba(0,87,184,0.08)' : 'rgba(255,255,255,0.15)',
                 color: scrolled ? '#0057B8' : 'white',
                 cursor: 'pointer', alignItems: 'center', justifyContent: 'center',
+                flexShrink: 0,
               }}
               id="mobile-hamburger"
               aria-label="Open menu"
@@ -193,8 +187,8 @@ export default function Navbar() {
       {/* Search Overlay */}
       {searchOpen && (
         <div style={{
-          position: 'fixed', inset: 0, background: 'rgba(10,15,30,0.8)', zIndex: 2000,
-          display: 'flex', alignItems: 'flex-start', justifyContent: 'center', paddingTop: 120,
+          position: 'fixed', inset: 0, background: 'rgba(10,15,30,0.85)', zIndex: 2000,
+          display: 'flex', alignItems: 'flex-start', justifyContent: 'center', paddingTop: 100,
           backdropFilter: 'blur(8px)',
         }}
           onClick={() => setSearchOpen(false)}
@@ -205,7 +199,7 @@ export default function Navbar() {
               type="text"
               placeholder="Search windows, doors, products..."
               style={{
-                width: '100%', padding: '20px 24px', fontSize: '1.2rem',
+                width: '100%', padding: '18px 24px', fontSize: '1.1rem',
                 border: 'none', borderRadius: 12, outline: 'none',
                 fontFamily: 'Outfit, sans-serif', boxShadow: '0 20px 60px rgba(0,0,0,0.3)',
               }}
@@ -216,7 +210,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       <div style={{
-        position: 'fixed', top: 0, right: 0, height: '100dvh', width: '100%', maxWidth: 360,
+        position: 'fixed', top: 0, right: 0, height: '100dvh', width: '100%', maxWidth: 340,
         background: 'white', zIndex: 2000,
         transform: mobileOpen ? 'translateX(0)' : 'translateX(100%)',
         transition: 'transform 0.4s cubic-bezier(0.22, 1, 0.36, 1)',
@@ -224,35 +218,50 @@ export default function Navbar() {
         display: 'flex', flexDirection: 'column',
         overflowY: 'auto',
       }}>
-        <div style={{ padding: '20px 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid #F1F5F9' }}>
-          <span style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 700, fontSize: '1.1rem', color: '#0057B8' }}>ClearVista</span>
-          <button onClick={() => setMobileOpen(false)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#64748B' }}>
+        {/* Drawer Header */}
+        <div style={{ padding: '18px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid #F1F5F9' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            <div style={{ width: 30, height: 30, background: 'linear-gradient(135deg, #0057B8, #009FE3)', borderRadius: 6, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="3" width="8" height="8" rx="1" fill="white" opacity="0.9"/>
+                <rect x="13" y="3" width="8" height="8" rx="1" fill="white" opacity="0.6"/>
+                <rect x="3" y="13" width="8" height="8" rx="1" fill="white" opacity="0.6"/>
+                <rect x="13" y="13" width="8" height="8" rx="1" fill="white" opacity="0.9"/>
+              </svg>
+            </div>
+            <span style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 700, fontSize: '1.1rem', color: '#0057B8' }}>ClearVista</span>
+          </div>
+          <button onClick={() => setMobileOpen(false)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#64748B', padding: 4 }}>
             <X size={24} />
           </button>
         </div>
-        <nav style={{ padding: '16px 0' }}>
+
+        {/* Nav Links */}
+        <nav style={{ padding: '12px 0', flex: 1 }}>
           {navItems.map((item) => (
             <div key={item.label}>
               {item.href ? (
                 <Link href={item.href} onClick={() => setMobileOpen(false)} style={{
-                  display: 'block', padding: '14px 24px', textDecoration: 'none',
-                  fontFamily: 'Outfit, sans-serif', fontWeight: 600, fontSize: '1.05rem',
+                  display: 'block', padding: '14px 20px', textDecoration: 'none',
+                  fontFamily: 'Outfit, sans-serif', fontWeight: 600, fontSize: '1rem',
                   color: '#0F172A', borderBottom: '1px solid #F1F5F9',
                 }}>
                   {item.label}
                 </Link>
               ) : (
                 <>
-                  <div style={{ padding: '14px 24px 8px', fontFamily: 'Outfit, sans-serif', fontWeight: 700, fontSize: '0.8rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#94A3B8' }}>
+                  <div style={{ padding: '12px 20px 6px', fontFamily: 'Outfit, sans-serif', fontWeight: 700, fontSize: '0.75rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#94A3B8' }}>
                     {item.label}
                   </div>
                   {item.children?.map((child) => (
                     <Link key={child.href} href={child.href} onClick={() => setMobileOpen(false)} style={{
-                      display: 'block', padding: '10px 32px', textDecoration: 'none',
-                      fontFamily: 'Inter, sans-serif', fontWeight: 500, fontSize: '0.95rem',
+                      display: 'flex', flexDirection: 'column', gap: 2,
+                      padding: '10px 28px 10px 32px', textDecoration: 'none',
+                      fontFamily: 'Inter, sans-serif', fontWeight: 500, fontSize: '0.92rem',
                       color: '#334155', borderBottom: '1px solid #F8FAFC',
                     }}>
-                      {child.label}
+                      <span>{child.label}</span>
+                      <span style={{ fontSize: '0.73rem', color: '#94A3B8' }}>{child.hint}</span>
                     </Link>
                   ))}
                 </>
@@ -260,27 +269,35 @@ export default function Navbar() {
             </div>
           ))}
         </nav>
-        <div style={{ padding: 24, marginTop: 'auto', borderTop: '1px solid #F1F5F9' }}>
+
+        {/* Drawer Footer */}
+        <div style={{ padding: '16px 20px', borderTop: '1px solid #F1F5F9', display: 'flex', flexDirection: 'column', gap: 10 }}>
           <Link href="/contact" onClick={() => setMobileOpen(false)} style={{ textDecoration: 'none' }}>
-            <button className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
+            <button className="btn btn-primary" style={{ width: '100%', justifyContent: 'center', fontSize: '0.95rem' }}>
               <Phone size={16} /> Get Free Quote
             </button>
           </Link>
+          <a href="https://wa.me/919800000000" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+            <button style={{
+              width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
+              padding: '12px', borderRadius: 4, border: 'none',
+              background: '#25D366', color: 'white', fontFamily: 'Outfit, sans-serif',
+              fontWeight: 600, fontSize: '0.95rem', cursor: 'pointer',
+            }}>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              WhatsApp Us
+            </button>
+          </a>
         </div>
       </div>
 
-      {/* Mobile overlay backdrop */}
+      {/* Backdrop */}
       {mobileOpen && (
-        <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.5)', zIndex: 1999 }}
+        <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.5)', zIndex: 1999, backdropFilter: 'blur(2px)' }}
           onClick={() => setMobileOpen(false)} />
       )}
-
-      <style>{`
-        @media (max-width: 1024px) {
-          nav { display: none !important; }
-          #mobile-hamburger { display: flex !important; }
-        }
-      `}</style>
     </>
   );
 }
