@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { Menu, X, Search, Phone, ChevronDown } from 'lucide-react';
+import { Menu, X, Search, Phone, ChevronDown, Home, LayoutGrid, MessageCircle } from 'lucide-react';
 
 const navItems = [
   {
@@ -165,20 +165,22 @@ export default function Navbar() {
               </button>
             </Link>
 
-            {/* Mobile Hamburger */}
+            {/* Premium Mobile Hamburger */}
             <button
               onClick={() => setMobileOpen(true)}
               style={{
-                display: 'none', width: 40, height: 40, borderRadius: 8, border: 'none',
+                display: 'none', 
+                padding: '8px 16px', borderRadius: '100px', border: 'none',
                 background: scrolled ? 'rgba(0,87,184,0.08)' : 'rgba(255,255,255,0.15)',
                 color: scrolled ? '#0057B8' : 'white',
-                cursor: 'pointer', alignItems: 'center', justifyContent: 'center',
-                flexShrink: 0,
+                cursor: 'pointer', alignItems: 'center', justifyContent: 'center', gap: 6,
+                flexShrink: 0, transition: 'all 0.3s ease'
               }}
               id="mobile-hamburger"
               aria-label="Open menu"
             >
-              <Menu size={22} />
+              <span style={{ fontSize: '0.85rem', fontWeight: 600, fontFamily: 'Outfit, sans-serif' }}>Menu</span>
+              <Menu size={18} strokeWidth={2.5} />
             </button>
           </div>
         </div>
@@ -298,6 +300,49 @@ export default function Navbar() {
         <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.5)', zIndex: 1999, backdropFilter: 'blur(2px)' }}
           onClick={() => setMobileOpen(false)} />
       )}
+
+      {/* Mobile Sticky Bottom Bar */}
+      <div id="mobile-bottom-bar" style={{
+        position: 'fixed',
+        bottom: 0, left: 0, width: '100%',
+        background: 'white',
+        borderTop: '1px solid #F1F5F9',
+        boxShadow: '0 -10px 30px rgba(0,0,0,0.05)',
+        display: 'none', // Shown via CSS media query
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        padding: '12px 0',
+        paddingBottom: 'calc(12px + env(safe-area-inset-bottom))',
+        zIndex: 1500,
+      }}>
+        <Link href="/" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4, textDecoration: 'none', color: '#64748B' }}>
+          <Home size={22} strokeWidth={2} />
+          <span style={{ fontSize: '0.65rem', fontWeight: 600, fontFamily: 'Outfit, sans-serif' }}>Home</span>
+        </Link>
+        <Link href="/upc-products" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4, textDecoration: 'none', color: '#64748B' }}>
+          <LayoutGrid size={22} strokeWidth={2} />
+          <span style={{ fontSize: '0.65rem', fontWeight: 600, fontFamily: 'Outfit, sans-serif' }}>Products</span>
+        </Link>
+        <div style={{ position: 'relative', top: -24 }}>
+          <Link href="/contact" style={{ 
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            width: 56, height: 56, borderRadius: '50%',
+            background: 'linear-gradient(135deg, #0057B8, #009FE3)',
+            color: 'white', boxShadow: '0 8px 25px rgba(0,87,184,0.4)',
+            border: '4px solid white'
+           }}>
+            <Phone size={24} fill="currentColor" />
+          </Link>
+        </div>
+        <a href="https://wa.me/919800000000" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4, textDecoration: 'none', color: '#64748B' }}>
+          <MessageCircle size={22} strokeWidth={2} />
+          <span style={{ fontSize: '0.65rem', fontWeight: 600, fontFamily: 'Outfit, sans-serif' }}>WhatsApp</span>
+        </a>
+        <button onClick={() => setMobileOpen(true)} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4, background: 'none', border: 'none', color: '#64748B', cursor: 'pointer' }}>
+          <Menu size={22} strokeWidth={2} />
+          <span style={{ fontSize: '0.65rem', fontWeight: 600, fontFamily: 'Outfit, sans-serif' }}>Menu</span>
+        </button>
+      </div>
     </>
   );
 }

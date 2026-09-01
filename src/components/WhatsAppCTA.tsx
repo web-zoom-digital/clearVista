@@ -24,6 +24,7 @@ export default function WhatsAppCTA() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
+        className="wa-floating-container"
         onMouseEnter={() => setShowTooltip(true)}
         onMouseLeave={() => setShowTooltip(false)}
         style={{
@@ -101,8 +102,8 @@ export default function WhatsAppCTA() {
           0% { transform: scale(1); opacity: 0.8; }
           100% { transform: scale(1.6); opacity: 0; }
         }
-        @media (max-width: 640px) {
-          .wa-btn { bottom: 18px !important; right: 18px !important; width: 52px !important; height: 52px !important; }
+        @media (max-width: 991px) {
+          .wa-floating-container { display: none !important; }
         }
       `}</style>
     </>

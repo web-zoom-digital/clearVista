@@ -640,6 +640,12 @@ textarea.form-input:not(:placeholder-shown) ~ .form-label {
   #mobile-hamburger { display: flex !important; }
 }
 
+@media (max-width: 768px) {
+  #mobile-bottom-bar { display: flex !important; }
+  #mobile-hamburger { display: none !important; }
+  body { padding-bottom: 70px; }
+}
+
 /* ==================== SECTIONS RESPONSIVE ==================== */
 @media (max-width: 768px) {
   /* Section padding */
