@@ -2,17 +2,13 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { Menu, X, Search, Phone, ChevronDown, Home, LayoutGrid, MessageCircle } from 'lucide-react';
+import { Menu, X, Search, Phone, ChevronDown, Home, LayoutGrid, MessageCircle, Mail } from 'lucide-react';
 
 const navItems = [
-  {
-    label: 'Products',
-    children: [
-      { label: 'uPVC Windows', href: '/windows', hint: 'Sliding, Casement & more' },
-      { label: 'uPVC Doors', href: '/doors', hint: 'Sliding, Swing & French' },
-      { label: 'All UPC Products', href: '/upc-products', hint: 'Full product catalog' },
-    ],
-  },
+  { label: 'Home', href: '/' },
+  { label: 'Windows', href: '/windows' },
+  { label: 'Doors', href: '/doors' },
+  { label: 'All Products', href: '/upc-products' },
   { label: 'Projects', href: '/projects' },
   { label: 'About Us', href: '/about' },
   { label: 'Contact', href: '/contact' },
@@ -22,7 +18,6 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [searchOpen, setSearchOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -51,17 +46,44 @@ export default function Navbar() {
           backdropFilter: scrolled ? 'blur(20px)' : 'none',
           borderBottom: scrolled ? '1px solid rgba(0,0,0,0.06)' : 'none',
           boxShadow: scrolled ? '0 2px 20px rgba(0,0,0,0.08)' : 'none',
+          display: 'flex', flexDirection: 'column'
         }}
       >
-        <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 68 }}>
-          {/* Logo */}
-          <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 10 }}>
+        {/* Top Bar */}
+        <div style={{
+          background: '#0F172A',
+          color: 'white',
+          fontSize: '0.8rem',
+          fontFamily: 'Inter, sans-serif',
+          height: scrolled ? 0 : 36,
+          overflow: 'hidden',
+          transition: 'height 0.3s ease',
+          display: 'flex', alignItems: 'center'
+        }}>
+          <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
+            <div style={{ display: 'flex', gap: 16 }}>
+              <a href="mailto:clearvistadoors@gmail.com" style={{ color: 'rgba(255,255,255,0.8)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 6 }}>
+                <Mail size={12} /> <span className="topbar-text">clearvistadoors@gmail.com</span>
+              </a>
+              <div style={{ color: 'rgba(255,255,255,0.3)' }}>|</div>
+              <a href="tel:+919871770357" style={{ color: 'rgba(255,255,255,0.8)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 6 }}>
+                <Phone size={12} /> <span className="topbar-text">+91 98717 70357</span>
+              </a>
+            </div>
+            <div className="topbar-hide-mobile" style={{ display: 'flex', gap: 16, color: 'rgba(255,255,255,0.8)' }}>
+               Welcome to ClearVista Building Systems
+            </div>
+          </div>
+        </div>
+
+        <div style={{ maxWidth: 1480, width: '100%', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 80, padding: '0 32px' }}>
+          {/* LEFT: Logo */}
+          <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 12, flexShrink: 0, paddingRight: 40 }}>
             <div style={{
-              width: 34, height: 34,
+              width: 36, height: 36,
               background: 'linear-gradient(135deg, #0057B8, #009FE3)',
               borderRadius: 8,
               display: 'flex', alignItems: 'center', justifyContent: 'center',
-              flexShrink: 0,
             }}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                 <rect x="3" y="3" width="8" height="8" rx="1" fill="white" opacity="0.9"/>
@@ -73,7 +95,7 @@ export default function Navbar() {
             <span style={{
               fontFamily: 'Outfit, sans-serif',
               fontWeight: 800,
-              fontSize: '1.3rem',
+              fontSize: '1.4rem',
               color: scrolled ? '#0057B8' : 'white',
               letterSpacing: '-0.02em',
               transition: 'color 0.3s ease',
@@ -82,8 +104,8 @@ export default function Navbar() {
             </span>
           </Link>
 
-          {/* Desktop Nav */}
-          <nav className="desktop-nav" style={{ display: 'flex', alignItems: 'center', gap: 4 }} ref={dropdownRef}>
+          {/* CENTER: Desktop Nav */}
+          <nav className="desktop-nav" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 34, flex: 1 }} ref={dropdownRef}>
             {navItems.map((item) => (
               <div key={item.label} style={{ position: 'relative' }}
                 onMouseEnter={() => item.children && setActiveDropdown(item.label)}
@@ -91,7 +113,15 @@ export default function Navbar() {
               >
                 {item.href ? (
                   <Link href={item.href} className="nav-link"
-                    style={{ color: scrolled ? '#1E293B' : 'rgba(255,255,255,0.9)', display: 'flex', alignItems: 'center', gap: 4 }}
+                    style={{ 
+                      color: scrolled ? '#1E293B' : 'rgba(255,255,255,0.9)', 
+                      display: 'flex', alignItems: 'center', gap: 4,
+                      padding: '8px 4px',
+                      fontFamily: 'Outfit, sans-serif', fontWeight: 600, fontSize: '0.96rem',
+                      textDecoration: 'none', transition: 'color 0.2s'
+                    }}
+                    onMouseEnter={(e) => e.currentTarget.style.color = scrolled ? '#0057B8' : 'white'}
+                    onMouseLeave={(e) => e.currentTarget.style.color = scrolled ? '#1E293B' : 'rgba(255,255,255,0.9)'}
                   >
                     {item.label}
                   </Link>
@@ -100,39 +130,39 @@ export default function Navbar() {
                     style={{
                       background: 'none', border: 'none', cursor: 'pointer',
                       color: scrolled ? '#1E293B' : 'rgba(255,255,255,0.9)',
-                      display: 'flex', alignItems: 'center', gap: 4,
-                      fontFamily: 'Outfit, sans-serif', fontWeight: 500, fontSize: '0.95rem',
+                      display: 'flex', alignItems: 'center', gap: 6, padding: '8px 4px',
+                      fontFamily: 'Outfit, sans-serif', fontWeight: 600, fontSize: '0.96rem',
+                      transition: 'color 0.2s'
                     }}
+                    onMouseEnter={(e) => e.currentTarget.style.color = scrolled ? '#0057B8' : 'white'}
+                    onMouseLeave={(e) => e.currentTarget.style.color = scrolled ? '#1E293B' : 'rgba(255,255,255,0.9)'}
                   >
                     {item.label}
-                    <ChevronDown size={14} style={{ transition: 'transform 0.2s', transform: activeDropdown === item.label ? 'rotate(180deg)' : 'rotate(0)' }} />
+                    <ChevronDown size={16} style={{ transition: 'transform 0.2s', transform: activeDropdown === item.label ? 'rotate(180deg)' : 'rotate(0)' }} />
                   </button>
                 )}
 
                 {/* Dropdown */}
                 {item.children && (
                   <div style={{
-                    position: 'absolute', top: '100%', left: 0, marginTop: 8,
-                    background: 'white', borderRadius: 12,
-                    boxShadow: '0 20px 60px rgba(0,0,0,0.12)',
-                    border: '1px solid rgba(0,0,0,0.06)',
-                    padding: '12px 8px', minWidth: 220,
+                    position: 'absolute', top: '100%', left: '50%', transform: 'translateX(-50%)',
+                    width: 240, background: 'white', borderRadius: 12,
+                    boxShadow: '0 20px 40px rgba(0,0,0,0.1)', border: '1px solid #F1F5F9',
                     opacity: activeDropdown === item.label ? 1 : 0,
-                    pointerEvents: activeDropdown === item.label ? 'auto' : 'none',
-                    transform: activeDropdown === item.label ? 'translateY(0)' : 'translateY(-8px)',
-                    transition: 'all 0.25s cubic-bezier(0.22, 1, 0.36, 1)',
-                    zIndex: 100,
+                    visibility: activeDropdown === item.label ? 'visible' : 'hidden',
+                    transition: 'all 0.2s ease', transformOrigin: 'top center',
+                    marginTop: 12, paddingTop: 10, paddingBottom: 10, zIndex: 100,
                   }}>
                     {item.children.map((child) => (
                       <Link key={child.href} href={child.href} style={{
                         display: 'flex', flexDirection: 'column', gap: 2,
-                        padding: '10px 16px', borderRadius: 8,
-                        textDecoration: 'none', transition: 'background 0.2s ease',
+                        padding: '12px 20px', textDecoration: 'none',
+                        color: '#334155', transition: 'background 0.2s'
                       }}
-                        onMouseEnter={(e) => (e.currentTarget.style.background = '#F0F7FF')}
-                        onMouseLeave={(e) => (e.currentTarget.style.background = 'transparent')}
+                        onMouseEnter={(e) => e.currentTarget.style.background = '#F8FAFC'}
+                        onMouseLeave={(e) => e.currentTarget.style.background = 'transparent'}
                       >
-                        <span style={{ fontWeight: 600, fontSize: '0.9rem', color: '#0F172A' }}>{child.label}</span>
+                        <span style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize: '0.95rem' }}>{child.label}</span>
                         <span style={{ fontSize: '0.75rem', color: '#94A3B8' }}>{child.hint}</span>
                       </Link>
                     ))}
@@ -142,28 +172,29 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* Actions */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-            <button
-              onClick={() => setSearchOpen(!searchOpen)}
-              style={{
-                width: 40, height: 40, borderRadius: '50%', border: 'none', cursor: 'pointer',
-                background: scrolled ? 'rgba(0,87,184,0.08)' : 'rgba(255,255,255,0.15)',
-                color: scrolled ? '#0057B8' : 'white',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                transition: 'all 0.2s ease', flexShrink: 0,
-              }}
-              aria-label="Search"
-            >
-              <Search size={18} />
-            </button>
-
-            <Link href="/contact" style={{ textDecoration: 'none' }} className="desktop-quote-btn">
-              <button className="btn btn-primary" style={{ padding: '10px 20px', fontSize: '0.88rem', display: 'flex', alignItems: 'center', gap: 6, whiteSpace: 'nowrap' }}>
-                <Phone size={14} />
-                Get Free Quote
+          {/* RIGHT: Actions */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: 14, flexShrink: 0, paddingLeft: 40 }}>
+            <a href="tel:+919871770357" style={{ textDecoration: 'none' }} className="desktop-quote-btn">
+              <button className="btn btn-primary" style={{ padding: '10px 24px', fontSize: '0.95rem', display: 'flex', alignItems: 'center', gap: 8, whiteSpace: 'nowrap', borderRadius: 10 }}>
+                <Phone size={16} />
+                Call Now
               </button>
-            </Link>
+            </a>
+            
+            <a href="https://wa.me/919871770357" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="desktop-quote-btn">
+              <button style={{ 
+                padding: '10px 24px', fontSize: '0.95rem', display: 'flex', alignItems: 'center', gap: 8, whiteSpace: 'nowrap',
+                background: '#25D366', color: 'white', border: 'none', borderRadius: 10, fontWeight: 600, fontFamily: 'Outfit, sans-serif', cursor: 'pointer', transition: 'all 0.2s ease'
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
+              onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                WhatsApp
+              </button>
+            </a>
 
             {/* Premium Mobile Hamburger */}
             <button
@@ -186,29 +217,6 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* Search Overlay */}
-      {searchOpen && (
-        <div style={{
-          position: 'fixed', inset: 0, background: 'rgba(10,15,30,0.85)', zIndex: 2000,
-          display: 'flex', alignItems: 'flex-start', justifyContent: 'center', paddingTop: 100,
-          backdropFilter: 'blur(8px)',
-        }}
-          onClick={() => setSearchOpen(false)}
-        >
-          <div style={{ width: '90%', maxWidth: 600 }} onClick={(e) => e.stopPropagation()}>
-            <input
-              autoFocus
-              type="text"
-              placeholder="Search windows, doors, products..."
-              style={{
-                width: '100%', padding: '18px 24px', fontSize: '1.1rem',
-                border: 'none', borderRadius: 12, outline: 'none',
-                fontFamily: 'Outfit, sans-serif', boxShadow: '0 20px 60px rgba(0,0,0,0.3)',
-              }}
-            />
-          </div>
-        </div>
-      )}
 
       {/* Mobile Drawer */}
       <div style={{
@@ -278,7 +286,7 @@ export default function Navbar() {
               <Phone size={16} /> Get Free Quote
             </button>
           </Link>
-          <a href="https://wa.me/919800000000" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+          <a href="https://wa.me/919871770357" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
             <button style={{
               width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
               padding: '12px', borderRadius: 4, border: 'none',
@@ -333,7 +341,7 @@ export default function Navbar() {
             <Phone size={24} fill="currentColor" />
           </Link>
         </div>
-        <a href="https://wa.me/919800000000" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4, textDecoration: 'none', color: '#25D366' }}>
+        <a href="https://wa.me/919871770357" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4, textDecoration: 'none', color: '#25D366' }}>
           <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
           </svg>

@@ -854,3 +854,13 @@ textarea.form-input:not(:placeholder-shown) ~ .form-label {
   .product-tabs { overflow-x: auto; -webkit-overflow-scrolling: touch; flex-wrap: nowrap !important; padding-bottom: 4px; }
   .product-tabs::-webkit-scrollbar { height: 0; }
 }
+
+/* Topbar Styles */
+@media (max-width: 768px) {
+  .topbar-hide-mobile {
+    display: none !important;
+  }
+  .topbar-text {
+    display: none !important;
+  }
+}

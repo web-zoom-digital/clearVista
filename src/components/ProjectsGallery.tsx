@@ -98,7 +98,7 @@ export default function ProjectsGallery({ limit }: { limit?: number }) {
               <div style={{
                 position: 'absolute', inset: 0,
                 background: hovered === project.id
-                  ? 'linear-gradient(to top, rgba(0,87,184,0.85) 0%, rgba(0,87,184,0.3) 60%, transparent 100%)'
+                  ? 'linear-gradient(to top, rgba(10,15,30,0.9) 0%, rgba(10,15,30,0.3) 60%, transparent 100%)'
                   : 'linear-gradient(to top, rgba(10,15,30,0.7) 0%, transparent 60%)',
                 transition: 'background 0.4s ease',
               }} />

@@ -59,7 +59,7 @@ export default function Footer() {
                 Get Free Quote <ArrowRight size={16} />
               </button>
             </Link>
-            <a href="tel:+911800XXXXXX" style={{ textDecoration: 'none' }}>
+            <a href="tel:+919871770357" style={{ textDecoration: 'none' }}>
               <button className="btn" style={{
                 background: 'rgba(255,255,255,0.15)', color: 'white',
                 border: '1.5px solid rgba(255,255,255,0.4)',
@@ -100,21 +100,21 @@ export default function Footer() {
 
             {/* Contact Info */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-              <a href="tel:+911800XXXXXX" style={{ display: 'flex', alignItems: 'center', gap: 10, color: 'rgba(255,255,255,0.7)', textDecoration: 'none', fontSize: '0.88rem', transition: 'color 0.2s' }}
-                onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#009FE3'; }}
-                onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.7)'; }}
+              <a href="tel:+919871770357" style={{ display: 'flex', alignItems: 'center', gap: 10, color: 'rgba(255,255,255,0.7)', textDecoration: 'none', fontSize: '0.88rem', transition: 'color 0.2s' }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = 'white')}
+                onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255,255,255,0.7)')}
               >
-                <Phone size={15} color="#009FE3" /> 1800-XXX-XXXX (Toll Free)
+                <Phone size={15} color="#009FE3" /> +91 98717 70357
               </a>
-              <a href="mailto:info@clearvista.in" style={{ display: 'flex', alignItems: 'center', gap: 10, color: 'rgba(255,255,255,0.7)', textDecoration: 'none', fontSize: '0.88rem', transition: 'color 0.2s' }}
-                onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#009FE3'; }}
-                onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.7)'; }}
+              <a href="mailto:clearvistadoors@gmail.com" style={{ display: 'flex', alignItems: 'center', gap: 10, color: 'rgba(255,255,255,0.7)', textDecoration: 'none', fontSize: '0.88rem', transition: 'color 0.2s' }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = 'white')}
+                onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255,255,255,0.7)')}
               >
-                <Mail size={15} color="#009FE3" /> info@clearvista.in
+                <Mail size={15} color="#009FE3" /> clearvistadoors@gmail.com
               </a>
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10, fontSize: '0.88rem' }}>
                 <MapPin size={15} color="#009FE3" style={{ marginTop: 2, flexShrink: 0 }} />
-                <span>New Delhi, India (and 150+ cities pan India)</span>
+                <span>36 Jagat Narain Road, Golaganj, Lucknow, UP 226018</span>
               </div>
             </div>
           </div>
@@ -150,11 +150,15 @@ export default function Footer() {
           paddingTop: 32,
           display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 20,
         }}>
-          <p style={{ fontSize: '0.82rem', color: 'rgba(255,255,255,0.35)' }}>
-            © {new Date().getFullYear()} ClearVista Building Systems Pvt. Ltd. All rights reserved. |{' '}
-            <Link href="/privacy" style={{ color: 'rgba(255,255,255,0.45)', textDecoration: 'none' }}>Privacy Policy</Link> |{' '}
-            <Link href="/terms" style={{ color: 'rgba(255,255,255,0.45)', textDecoration: 'none' }}>Terms of Use</Link>
-          </p>
+          <div style={{ fontSize: '0.82rem', color: 'rgba(255,255,255,0.35)', display: 'flex', flexDirection: 'column', gap: 6 }}>
+            <div>© {new Date().getFullYear()} ClearVista. All rights reserved.</div>
+            <div>
+              Designed, Developed & SEO Managed by{' '}
+              <a href="https://www.zoomdigital.in/" target="_blank" rel="noopener noreferrer" style={{ color: '#009FE3', textDecoration: 'none', fontWeight: 600 }}>
+                Zoom Digital
+              </a>
+            </div>
+          </div>
 
           {/* Socials */}
           <div style={{ display: 'flex', gap: 12 }}>

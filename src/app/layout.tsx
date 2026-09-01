@@ -80,7 +80,7 @@ const organizationSchema = {
   areaServed: "IN",
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+91-1800-XXX-XXXX",
+    telephone: "+91-98717-70357",
     contactType: "customer service",
     contactOption: "TollFree",
     areaServed: "IN",
@@ -101,13 +101,13 @@ const localBusinessSchema = {
   name: "ClearVista Windows & Doors",
   image: "https://www.clearvista.in/og-image.jpg",
   priceRange: "₹₹₹",
-  telephone: "+91-1800-XXX-XXXX",
+  telephone: "+91-98717-70357",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Your Address Here",
-    addressLocality: "New Delhi",
-    addressRegion: "Delhi",
-    postalCode: "110001",
+    streetAddress: "36 Jagat Narain Road, Golaganj",
+    addressLocality: "Lucknow",
+    addressRegion: "UP",
+    postalCode: "226018",
     addressCountry: "IN",
   },
   geo: {
@@ -169,7 +169,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body>
+      <body suppressHydrationWarning>
         {children}
         <WhatsAppCTA />
       </body>

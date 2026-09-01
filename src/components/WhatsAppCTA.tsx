@@ -12,7 +12,7 @@ export default function WhatsAppCTA() {
     return () => clearTimeout(t);
   }, []);
 
-  const whatsappNumber = '919800000000'; // Replace with actual number
+  const whatsappNumber = '919871770357'; // Replace with actual number
   const message = encodeURIComponent('Hello ClearVista! I am interested in uPVC Windows & Doors. Please share more details.');
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
 

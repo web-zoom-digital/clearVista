@@ -184,7 +184,7 @@ export default function HomePage() {
                   Get Free Quote <ArrowRight size={18} />
                 </button>
               </Link>
-              <a href="tel:+911800XXXXXX" style={{ textDecoration: 'none' }}>
+              <a href="tel:+919871770357" style={{ textDecoration: 'none' }}>
                 <button className="btn" style={{
                   fontSize: '1.05rem', padding: '16px 36px',
                   background: 'rgba(255,255,255,0.12)', color: 'white',
