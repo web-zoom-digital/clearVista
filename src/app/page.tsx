@@ -142,7 +142,7 @@ export default function HomePage() {
                     userSelect: 'none',
                   }}>
                     {faq.name}
-                    <span style={{ color: '#0057B8', fontSize: '1.4rem', lineHeight: 1 }}>+</span>
+                    <span style={{ color: '#C8A05C', fontSize: '1.4rem', lineHeight: 1 }}>+</span>
                   </summary>
                   <div style={{ padding: '0 24px 20px', color: '#64748B', lineHeight: 1.75, fontSize: '0.95rem' }}>
                     {faq.acceptedAnswer.text}
@@ -156,12 +156,12 @@ export default function HomePage() {
         {/* 9. Final CTA */}
         <section style={{
           padding: '100px 0', position: 'relative', overflow: 'hidden',
-          background: 'linear-gradient(135deg, #0057B8 0%, #003D82 50%, #0057B8 100%)',
+          background: 'linear-gradient(135deg, #C8A05C 0%, #A6823B 50%, #C8A05C 100%)',
         }}>
           {/* BG pattern */}
           <div style={{
             position: 'absolute', inset: 0,
-            backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(255,255,255,0.05) 0%, transparent 50%), radial-gradient(circle at 80% 50%, rgba(0,159,227,0.15) 0%, transparent 50%)',
+            backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(255,255,255,0.05) 0%, transparent 50%), radial-gradient(circle at 80% 50%, rgba(212, 175, 55,0.15) 0%, transparent 50%)',
             pointerEvents: 'none',
           }} />
           <div className="container" style={{ position: 'relative', zIndex: 1, textAlign: 'center' }}>
@@ -173,7 +173,7 @@ export default function HomePage() {
               fontSize: 'clamp(2rem, 4vw, 3.5rem)', marginBottom: 20, lineHeight: 1.1,
             }}>
               Transform Your Home with<br />
-              <span style={{ color: '#45BBFF' }}>Premium uPVC Windows & Doors</span>
+              <span style={{ color: '#F0D16E' }}>Premium uPVC Windows & Doors</span>
             </h2>
             <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: '1.1rem', marginBottom: 48, maxWidth: 540, marginLeft: 'auto', marginRight: 'auto' }}>
               Get a free consultation, measurement, and quote from our expert team. No obligation, no pressure.

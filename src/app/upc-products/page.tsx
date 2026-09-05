@@ -49,26 +49,26 @@ export default function UPCProductsPage() {
       <main>
         {/* Hero */}
         <section style={{
-          background: 'linear-gradient(135deg, #003D82 0%, #0A0F1E 100%)',
+          background: 'linear-gradient(135deg, #A6823B 0%, #0A0A0A 100%)',
           padding: '160px 0 80px', position: 'relative', overflow: 'hidden',
         }}>
           <div style={{
             position: 'absolute', inset: 0,
-            background: 'radial-gradient(ellipse at 50% 50%, rgba(0,159,227,0.12) 0%, transparent 70%)',
+            background: 'radial-gradient(ellipse at 50% 50%, rgba(212, 175, 55,0.12) 0%, transparent 70%)',
             pointerEvents: 'none',
           }} />
           <div className="container" style={{ position: 'relative', zIndex: 1, textAlign: 'center' }}>
             <div style={{ display: 'flex', gap: 8, alignItems: 'center', marginBottom: 32, justifyContent: 'center' }}>
               <Link href="/" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none', fontSize: '0.85rem' }}>Home</Link>
               <span style={{ color: 'rgba(255,255,255,0.25)' }}>›</span>
-              <span style={{ color: '#45BBFF', fontSize: '0.85rem', fontWeight: 500 }}>UPC Products</span>
+              <span style={{ color: '#F0D16E', fontSize: '0.85rem', fontWeight: 500 }}>UPC Products</span>
             </div>
-            <div className="section-label" style={{ color: '#45BBFF', justifyContent: 'center' }}>
-              <span style={{ width: 32, height: 2, background: '#45BBFF', borderRadius: 2, display: 'block' }} />
+            <div className="section-label" style={{ color: '#F0D16E', justifyContent: 'center' }}>
+              <span style={{ width: 32, height: 2, background: '#F0D16E', borderRadius: 2, display: 'block' }} />
               Complete Product Catalog
             </div>
             <h1 className="text-h1" style={{ color: 'white', marginTop: 16, marginBottom: 16 }}>
-              All ClearVista <span style={{ color: '#45BBFF' }}>uPVC Products</span>
+              All ClearVista <span style={{ color: '#F0D16E' }}>uPVC Products</span>
             </h1>
             <p className="text-h4" style={{ color: 'rgba(255,255,255,0.7)', maxWidth: 560, margin: '0 auto 36px', fontWeight: 400 }}>
               Browse our complete range of BIS-certified premium uPVC windows, doors, and specialty products.
@@ -92,7 +92,7 @@ export default function UPCProductsPage() {
                         <span style={{
                           position: 'absolute', top: 12, left: 12,
                           padding: '3px 10px', borderRadius: 100,
-                          background: '#0057B8', color: 'white',
+                          background: '#C8A05C', color: 'white',
                           fontSize: '0.72rem', fontWeight: 600, fontFamily: 'Outfit, sans-serif',
                         }}>
                           {product.badge}
@@ -128,7 +128,7 @@ export default function UPCProductsPage() {
                       <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 16px', display: 'flex', flexDirection: 'column', gap: 5 }}>
                         {product.features.slice(0, 3).map((f) => (
                           <li key={f} style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: '0.78rem', color: '#64748B' }}>
-                            <Check size={12} color="#009FE3" strokeWidth={2.5} />
+                            <Check size={12} color="#D4AF37" strokeWidth={2.5} />
                             {f}
                           </li>
                         ))}
@@ -136,10 +136,10 @@ export default function UPCProductsPage() {
 
                       {/* Price */}
                       <div style={{ marginTop: 'auto', paddingTop: 12, borderTop: '1px solid #F1F5F9' }}>
-                        <p style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 700, color: '#0057B8', fontSize: '0.9rem' }}>
+                        <p style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 700, color: '#C8A05C', fontSize: '0.9rem' }}>
                           {product.price}
                         </p>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginTop: 8, color: '#0057B8', fontWeight: 600, fontSize: '0.85rem' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginTop: 8, color: '#C8A05C', fontWeight: 600, fontSize: '0.85rem' }}>
                           Get Quote <ArrowRight size={14} />
                         </div>
                       </div>

@@ -11,7 +11,7 @@ const audienceCards = [
     hint: 'Find windows & doors for your home',
     href: '/windows',
     image: '/images/who-homeowner.jpg',
-    color: '#0057B8',
+    color: '#C8A05C',
   },
   {
     id: 'architect',
@@ -19,7 +19,7 @@ const audienceCards = [
     hint: 'Explore technical specs & designs',
     href: '/upc-products',
     image: '/images/who-architect.jpg',
-    color: '#009FE3',
+    color: '#D4AF37',
   },
   {
     id: 'builder',
@@ -27,7 +27,7 @@ const audienceCards = [
     hint: 'Bulk orders & project partnerships',
     href: '/contact',
     image: '/images/who-builder.jpg',
-    color: '#0057B8',
+    color: '#C8A05C',
   },
   {
     id: 'exploring',
@@ -35,7 +35,7 @@ const audienceCards = [
     hint: 'Browse our complete collection',
     href: '/upc-products',
     image: '/images/who-fabricator.jpg',
-    color: '#009FE3',
+    color: '#D4AF37',
   },
 ];
 
@@ -59,28 +59,28 @@ export default function WhoAreYou() {
       {/* Decorative BG */}
       <div style={{
         position: 'absolute', top: 0, right: 0, width: '40vw', height: '100%',
-        background: 'radial-gradient(ellipse at top right, rgba(0,87,184,0.15) 0%, transparent 70%)',
+        background: 'radial-gradient(ellipse at top right, rgba(200, 160, 92,0.15) 0%, transparent 70%)',
         pointerEvents: 'none',
       }} />
       <div style={{
         position: 'absolute', bottom: 0, left: 0, width: '30vw', height: '50%',
-        background: 'radial-gradient(ellipse at bottom left, rgba(0,159,227,0.1) 0%, transparent 70%)',
+        background: 'radial-gradient(ellipse at bottom left, rgba(212, 175, 55,0.1) 0%, transparent 70%)',
         pointerEvents: 'none',
       }} />
 
       <div className="container" ref={ref}>
         {/* Header */}
         <div style={{ maxWidth: 560, marginBottom: 64 }}>
-          <div className="section-label" style={{ color: '#45BBFF' }}>
-            <span style={{ width: 32, height: 2, background: '#45BBFF', borderRadius: 2, display: 'block' }} />
+          <div className="section-label" style={{ color: '#F0D16E' }}>
+            <span style={{ width: 32, height: 2, background: '#F0D16E', borderRadius: 2, display: 'block' }} />
             Begin Your Journey
           </div>
           <h2 className="text-h2" style={{ color: 'white', marginTop: 12 }}>
             Tell us who you are,{' '}
-            <span style={{ color: '#45BBFF' }}>we'll guide you</span>
+            <span style={{ color: '#F0D16E' }}>we&apos;ll guide you</span>
           </h2>
           <p className="text-p" style={{ color: 'rgba(255,255,255,0.6)', marginTop: 16 }}>
-            Whether you're a homeowner, architect, or builder — ClearVista has the perfect uPVC solution for your needs.
+            Whether you&apos;re a homeowner, architect, or builder — ClearVista has the perfect uPVC solution for your needs.
           </p>
         </div>
 
@@ -124,7 +124,7 @@ export default function WhoAreYou() {
                     {/* Overlay */}
                     <div style={{
                       position: 'absolute', inset: 0,
-                      background: 'rgba(10,15,30,0.25)',
+                      background: 'rgba(10, 10, 10,0.25)',
                       transition: 'opacity 0.3s ease',
                       opacity: hovered === card.id ? 0 : 1,
                     }} />
@@ -143,7 +143,7 @@ export default function WhoAreYou() {
                     <path
                       d="M130 4 L256 130 L130 256 L4 130 Z"
                       fill="none"
-                      stroke="#45BBFF"
+                      stroke="#F0D16E"
                       strokeWidth="3"
                       strokeLinejoin="miter"
                     />

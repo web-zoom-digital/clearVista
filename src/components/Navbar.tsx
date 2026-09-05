@@ -4,7 +4,13 @@ import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { Menu, X, Search, Phone, ChevronDown, Home, LayoutGrid, MessageCircle, Mail } from 'lucide-react';
 
-const navItems = [
+type NavItem = {
+  label: string;
+  href?: string;
+  children?: { label: string; href: string; hint?: string }[];
+};
+
+const navItems: NavItem[] = [
   { label: 'Home', href: '/' },
   { label: 'Windows', href: '/windows' },
   { label: 'Doors', href: '/doors' },
@@ -79,29 +85,35 @@ export default function Navbar() {
         <div style={{ maxWidth: 1480, width: '100%', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 80, padding: '0 32px' }}>
           {/* LEFT: Logo */}
           <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 12, flexShrink: 0, paddingRight: 40 }}>
-            <div style={{
-              width: 36, height: 36,
-              background: 'linear-gradient(135deg, #0057B8, #009FE3)',
-              borderRadius: 8,
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-            }}>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                <rect x="3" y="3" width="8" height="8" rx="1" fill="white" opacity="0.9"/>
-                <rect x="13" y="3" width="8" height="8" rx="1" fill="white" opacity="0.6"/>
-                <rect x="3" y="13" width="8" height="8" rx="1" fill="white" opacity="0.6"/>
-                <rect x="13" y="13" width="8" height="8" rx="1" fill="white" opacity="0.9"/>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#C8A05C' }}>
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <path d="M5 21V10C5 6.134 8.134 3 12 3C15.866 3 19 6.134 19 10V21" strokeLinecap="round" />
+                <path d="M12 10V21" strokeLinecap="round" />
+                <circle cx="9" cy="16" r="1.5" fill="currentColor" stroke="none" />
               </svg>
             </div>
-            <span style={{
-              fontFamily: 'Outfit, sans-serif',
-              fontWeight: 800,
-              fontSize: '1.4rem',
-              color: scrolled ? '#0057B8' : 'white',
-              letterSpacing: '-0.02em',
-              transition: 'color 0.3s ease',
-            }}>
-              Clear<span style={{ color: '#009FE3' }}>Vista</span>
-            </span>
+            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+              <span style={{
+                fontFamily: 'Outfit, sans-serif',
+                fontWeight: 800,
+                fontSize: '1.4rem',
+                color: scrolled ? '#C8A05C' : 'white',
+                letterSpacing: '-0.02em',
+                lineHeight: 1,
+                transition: 'color 0.3s ease',
+              }}>
+                ClearVista
+              </span>
+              <span style={{
+                fontSize: '0.65rem',
+                fontWeight: 600,
+                letterSpacing: '0.15em',
+                color: scrolled ? '#1E293B' : 'rgba(255,255,255,0.7)',
+                marginTop: 2,
+              }}>
+                DOORS & WINDOWS
+              </span>
+            </div>
           </Link>
 
           {/* CENTER: Desktop Nav */}
@@ -120,7 +132,7 @@ export default function Navbar() {
                       fontFamily: 'Outfit, sans-serif', fontWeight: 600, fontSize: '0.96rem',
                       textDecoration: 'none', transition: 'color 0.2s'
                     }}
-                    onMouseEnter={(e) => e.currentTarget.style.color = scrolled ? '#0057B8' : 'white'}
+                    onMouseEnter={(e) => e.currentTarget.style.color = scrolled ? '#C8A05C' : 'white'}
                     onMouseLeave={(e) => e.currentTarget.style.color = scrolled ? '#1E293B' : 'rgba(255,255,255,0.9)'}
                   >
                     {item.label}
@@ -134,7 +146,7 @@ export default function Navbar() {
                       fontFamily: 'Outfit, sans-serif', fontWeight: 600, fontSize: '0.96rem',
                       transition: 'color 0.2s'
                     }}
-                    onMouseEnter={(e) => e.currentTarget.style.color = scrolled ? '#0057B8' : 'white'}
+                    onMouseEnter={(e) => e.currentTarget.style.color = scrolled ? '#C8A05C' : 'white'}
                     onMouseLeave={(e) => e.currentTarget.style.color = scrolled ? '#1E293B' : 'rgba(255,255,255,0.9)'}
                   >
                     {item.label}
@@ -202,8 +214,8 @@ export default function Navbar() {
               style={{
                 display: 'none', 
                 padding: '8px 16px', borderRadius: '100px', border: 'none',
-                background: scrolled ? 'rgba(0,87,184,0.08)' : 'rgba(255,255,255,0.15)',
-                color: scrolled ? '#0057B8' : 'white',
+                background: scrolled ? 'rgba(200, 160, 92,0.08)' : 'rgba(255,255,255,0.15)',
+                color: scrolled ? '#C8A05C' : 'white',
                 cursor: 'pointer', alignItems: 'center', justifyContent: 'center', gap: 6,
                 flexShrink: 0, transition: 'all 0.3s ease'
               }}
@@ -230,15 +242,14 @@ export default function Navbar() {
         {/* Drawer Header */}
         <div style={{ padding: '18px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid #F1F5F9' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <div style={{ width: 30, height: 30, background: 'linear-gradient(135deg, #0057B8, #009FE3)', borderRadius: 6, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                <rect x="3" y="3" width="8" height="8" rx="1" fill="white" opacity="0.9"/>
-                <rect x="13" y="3" width="8" height="8" rx="1" fill="white" opacity="0.6"/>
-                <rect x="3" y="13" width="8" height="8" rx="1" fill="white" opacity="0.6"/>
-                <rect x="13" y="13" width="8" height="8" rx="1" fill="white" opacity="0.9"/>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#C8A05C' }}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <path d="M5 21V10C5 6.134 8.134 3 12 3C15.866 3 19 6.134 19 10V21" strokeLinecap="round" />
+                <path d="M12 10V21" strokeLinecap="round" />
+                <circle cx="9" cy="16" r="1.5" fill="currentColor" stroke="none" />
               </svg>
             </div>
-            <span style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 700, fontSize: '1.1rem', color: '#0057B8' }}>ClearVista</span>
+            <span style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 700, fontSize: '1.2rem', color: '#C8A05C', letterSpacing: '-0.02em' }}>ClearVista</span>
           </div>
           <button onClick={() => setMobileOpen(false)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#64748B', padding: 4 }}>
             <X size={24} />
@@ -334,8 +345,8 @@ export default function Navbar() {
           <Link href="/contact" style={{ 
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             width: 56, height: 56, borderRadius: '50%',
-            background: 'linear-gradient(135deg, #0057B8, #009FE3)',
-            color: 'white', boxShadow: '0 8px 25px rgba(0,87,184,0.4)',
+            background: 'linear-gradient(135deg, #C8A05C, #D4AF37)',
+            color: 'white', boxShadow: '0 8px 25px rgba(200, 160, 92,0.4)',
             border: '4px solid white'
            }}>
             <Phone size={24} fill="currentColor" />

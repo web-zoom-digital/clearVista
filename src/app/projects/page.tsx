@@ -19,27 +19,27 @@ export default function ProjectsPage() {
       <main>
         {/* Hero */}
         <section style={{
-          background: 'linear-gradient(135deg, #0A0F1E 0%, #0D1526 100%)',
+          background: 'linear-gradient(135deg, #0A0A0A 0%, #111111 100%)',
           padding: '160px 0 80px', position: 'relative', overflow: 'hidden',
         }}>
           <div style={{
             position: 'absolute', inset: 0,
-            background: 'radial-gradient(ellipse at 60% 50%, rgba(0,159,227,0.1) 0%, transparent 60%)',
+            background: 'radial-gradient(ellipse at 60% 50%, rgba(212, 175, 55,0.1) 0%, transparent 60%)',
             pointerEvents: 'none',
           }} />
           <div className="container" style={{ position: 'relative', zIndex: 1 }}>
             <div style={{ display: 'flex', gap: 8, alignItems: 'center', marginBottom: 32 }}>
               <Link href="/" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none', fontSize: '0.85rem' }}>Home</Link>
               <span style={{ color: 'rgba(255,255,255,0.25)' }}>›</span>
-              <span style={{ color: '#45BBFF', fontSize: '0.85rem', fontWeight: 500 }}>Projects</span>
+              <span style={{ color: '#F0D16E', fontSize: '0.85rem', fontWeight: 500 }}>Projects</span>
             </div>
-            <div className="section-label" style={{ color: '#45BBFF' }}>
-              <span style={{ width: 32, height: 2, background: '#45BBFF', borderRadius: 2, display: 'block' }} />
+            <div className="section-label" style={{ color: '#F0D16E' }}>
+              <span style={{ width: 32, height: 2, background: '#F0D16E', borderRadius: 2, display: 'block' }} />
               Our Portfolio
             </div>
             <h1 className="text-h1" style={{ color: 'white', marginTop: 16, marginBottom: 16 }}>
               Projects &{' '}
-              <span style={{ color: '#45BBFF' }}>Stories</span>
+              <span style={{ color: '#F0D16E' }}>Stories</span>
             </h1>
             <p className="text-h4" style={{ color: 'rgba(255,255,255,0.7)', maxWidth: 560, fontWeight: 400 }}>
               Thousands of homes, offices, and hotels transformed across India. Here&apos;s a glimpse of our finest work.

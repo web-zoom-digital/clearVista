@@ -69,34 +69,34 @@ export default function DoorsPage() {
       <main>
         {/* Hero */}
         <section style={{
-          background: 'linear-gradient(135deg, #003D82 0%, #0057B8 100%)',
+          background: 'linear-gradient(135deg, #A6823B 0%, #C8A05C 100%)',
           padding: '160px 0 100px', position: 'relative', overflow: 'hidden',
         }}>
           <div style={{
             position: 'absolute', inset: 0,
-            backgroundImage: 'radial-gradient(circle at 80% 50%, rgba(0,159,227,0.2) 0%, transparent 50%)',
+            backgroundImage: 'radial-gradient(circle at 80% 50%, rgba(212, 175, 55,0.2) 0%, transparent 50%)',
             pointerEvents: 'none',
           }} />
           <div className="container" style={{ position: 'relative', zIndex: 1 }}>
             <div style={{ display: 'flex', gap: 8, alignItems: 'center', marginBottom: 32 }}>
               <Link href="/" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none', fontSize: '0.85rem' }}>Home</Link>
               <span style={{ color: 'rgba(255,255,255,0.25)' }}>›</span>
-              <span style={{ color: '#45BBFF', fontSize: '0.85rem', fontWeight: 500 }}>Doors</span>
+              <span style={{ color: '#F0D16E', fontSize: '0.85rem', fontWeight: 500 }}>Doors</span>
             </div>
-            <div className="section-label" style={{ color: '#45BBFF' }}>
-              <span style={{ width: 32, height: 2, background: '#45BBFF', borderRadius: 2, display: 'block' }} />
+            <div className="section-label" style={{ color: '#F0D16E' }}>
+              <span style={{ width: 32, height: 2, background: '#F0D16E', borderRadius: 2, display: 'block' }} />
               uPVC Doors Collection
             </div>
             <h1 className="text-h1" style={{ color: 'white', marginTop: 16, marginBottom: 20 }}>
               Doors That Make a<br />
-              <span style={{ color: '#45BBFF' }}>Grand Statement</span>
+              <span style={{ color: '#F0D16E' }}>Grand Statement</span>
             </h1>
             <p className="text-h4" style={{ color: 'rgba(255,255,255,0.75)', maxWidth: 580, fontWeight: 400, marginBottom: 36 }}>
               First impressions matter. Our uPVC doors combine security, insulation, and elegance for every entrance.
             </p>
             <Link href="/contact" style={{ textDecoration: 'none' }}>
               <button className="btn" style={{
-                background: 'white', color: '#0057B8', display: 'flex', alignItems: 'center', gap: 8,
+                background: 'white', color: '#C8A05C', display: 'flex', alignItems: 'center', gap: 8,
               }}>
                 Get Free Quote <ArrowRight size={16} />
               </button>
@@ -116,7 +116,7 @@ export default function DoorsPage() {
                     <span style={{
                       position: 'absolute', top: 16, left: 16,
                       padding: '4px 12px', borderRadius: 100,
-                      background: '#009FE3', color: 'white',
+                      background: '#D4AF37', color: 'white',
                       fontSize: '0.75rem', fontWeight: 600, fontFamily: 'Outfit, sans-serif',
                     }}>
                       {door.badge}
@@ -132,7 +132,7 @@ export default function DoorsPage() {
                     <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 24px', display: 'flex', flexDirection: 'column', gap: 8 }}>
                       {door.features.map((f) => (
                         <li key={f} style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: '0.85rem', color: '#475569' }}>
-                          <Check size={14} color="#009FE3" strokeWidth={2.5} />
+                          <Check size={14} color="#D4AF37" strokeWidth={2.5} />
                           {f}
                         </li>
                       ))}

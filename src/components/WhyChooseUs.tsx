@@ -15,37 +15,37 @@ const features = [
     icon: Shield,
     title: 'Weather Resistant',
     desc: 'Built to withstand extreme Indian weather — rain, heat, dust, and humidity. Corrosion-free uPVC frames last 40+ years.',
-    color: '#0057B8',
+    color: '#C8A05C',
   },
   {
     icon: Volume2,
     title: 'Superior Soundproofing',
     desc: 'Double-glazed glass reduces outside noise by up to 45dB — perfect for urban homes near busy roads.',
-    color: '#009FE3',
+    color: '#D4AF37',
   },
   {
     icon: Thermometer,
     title: 'Thermal Insulation',
     desc: 'Multi-chamber uPVC profiles with thermal breaks keep your home cool in summer and warm in winter.',
-    color: '#0057B8',
+    color: '#C8A05C',
   },
   {
     icon: Zap,
     title: 'Energy Efficient',
     desc: 'Reduce your AC bills by up to 30% with our energy-efficient windows that minimize heat transfer.',
-    color: '#009FE3',
+    color: '#D4AF37',
   },
   {
     icon: Wind,
     title: 'Air-Tight Sealing',
     desc: 'Multi-point locking systems with EPDM gaskets ensure zero air and dust infiltration.',
-    color: '#0057B8',
+    color: '#C8A05C',
   },
   {
     icon: Droplets,
     title: 'Water Tight',
     desc: 'Tested to withstand heavy monsoon rains. No leakage, no seepage — guaranteed.',
-    color: '#009FE3',
+    color: '#D4AF37',
   },
 ];
 
@@ -135,7 +135,7 @@ export default function WhyChooseUs() {
               The <span className="title-gradient">ClearVista</span> Difference
             </h2>
             <p className="text-p" style={{ color: '#64748B', marginTop: 16, maxWidth: 540, marginLeft: 'auto', marginRight: 'auto' }}>
-              We don't just make windows and doors — we engineer comfort, security, and style into every product.
+              We don&apos;t just make windows and doors — we engineer comfort, security, and style into every product.
             </p>
           </div>
 
@@ -155,8 +155,8 @@ export default function WhyChooseUs() {
                 }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.transform = 'translateY(-6px)';
-                    e.currentTarget.style.boxShadow = '0 20px 50px rgba(0,87,184,0.12)';
-                    e.currentTarget.style.borderColor = '#0057B8';
+                    e.currentTarget.style.boxShadow = '0 20px 50px rgba(200, 160, 92,0.12)';
+                    e.currentTarget.style.borderColor = '#C8A05C';
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.transform = featuresInView ? 'translateY(0)' : 'translateY(30px)';

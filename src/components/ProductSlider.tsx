@@ -72,7 +72,7 @@ export default function ProductSlider() {
                 transition: 'all 0.3s cubic-bezier(0.22, 1, 0.36, 1)',
                 background: activeTab === i ? 'var(--color-primary)' : 'transparent',
                 color: activeTab === i ? 'white' : '#64748B',
-                boxShadow: activeTab === i ? '0 4px 12px rgba(0,87,184,0.3)' : 'none',
+                boxShadow: activeTab === i ? '0 4px 12px rgba(200, 160, 92,0.3)' : 'none',
               }}>
                 {tab}
               </button>
@@ -115,7 +115,7 @@ export default function ProductSlider() {
                 {/* Gradient overlay */}
                 <div style={{
                   position: 'absolute', inset: 0,
-                  background: 'linear-gradient(to top, rgba(10,15,30,0.8) 0%, rgba(10,15,30,0.1) 50%, transparent 100%)',
+                  background: 'linear-gradient(to top, rgba(10, 10, 10,0.8) 0%, rgba(10, 10, 10,0.1) 50%, transparent 100%)',
                 }} />
 
                 {/* Caption */}
@@ -127,7 +127,7 @@ export default function ProductSlider() {
                     {slide.label}
                   </p>
                   <div style={{
-                    width: 36, height: 36, borderRadius: '50%', background: '#009FE3',
+                    width: 36, height: 36, borderRadius: '50%', background: '#D4AF37',
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
                     transform: hovered === i ? 'translateX(0) scale(1.1)' : 'translateX(0)',
                     transition: 'transform 0.3s ease',
@@ -148,7 +148,7 @@ export default function ProductSlider() {
           display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 2,
           transition: 'all 0.2s ease',
         }}
-          onMouseEnter={(e) => { e.currentTarget.style.background = '#0057B8'; e.currentTarget.style.color = 'white'; }}
+          onMouseEnter={(e) => { e.currentTarget.style.background = '#C8A05C'; e.currentTarget.style.color = 'white'; }}
           onMouseLeave={(e) => { e.currentTarget.style.background = 'white'; e.currentTarget.style.color = '#0F172A'; }}
         >
           ‹
@@ -160,7 +160,7 @@ export default function ProductSlider() {
           display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 2,
           transition: 'all 0.2s ease',
         }}
-          onMouseEnter={(e) => { e.currentTarget.style.background = '#0057B8'; e.currentTarget.style.color = 'white'; }}
+          onMouseEnter={(e) => { e.currentTarget.style.background = '#C8A05C'; e.currentTarget.style.color = 'white'; }}
           onMouseLeave={(e) => { e.currentTarget.style.background = 'white'; e.currentTarget.style.color = '#0F172A'; }}
         >
           ›

@@ -34,29 +34,29 @@ export default function AboutPage() {
       <main>
         {/* Hero */}
         <section style={{
-          background: 'linear-gradient(135deg, #0A0F1E 0%, #003D82 100%)',
+          background: 'linear-gradient(135deg, #0A0A0A 0%, #A6823B 100%)',
           padding: '160px 0 100px', position: 'relative', overflow: 'hidden',
         }}>
           <div style={{
             position: 'absolute', inset: 0,
-            background: 'radial-gradient(ellipse at 30% 50%, rgba(0,159,227,0.15) 0%, transparent 60%)',
+            background: 'radial-gradient(ellipse at 30% 50%, rgba(212, 175, 55,0.15) 0%, transparent 60%)',
             pointerEvents: 'none',
           }} />
           <div className="container" style={{ position: 'relative', zIndex: 1 }}>
             <div style={{ display: 'flex', gap: 8, alignItems: 'center', marginBottom: 32 }}>
               <Link href="/" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none', fontSize: '0.85rem' }}>Home</Link>
               <span style={{ color: 'rgba(255,255,255,0.25)' }}>›</span>
-              <span style={{ color: '#45BBFF', fontSize: '0.85rem', fontWeight: 500 }}>About Us</span>
+              <span style={{ color: '#F0D16E', fontSize: '0.85rem', fontWeight: 500 }}>About Us</span>
             </div>
             <div className="about-hero-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }}>
               <div>
-                <div className="section-label" style={{ color: '#45BBFF' }}>
-                  <span style={{ width: 32, height: 2, background: '#45BBFF', borderRadius: 2, display: 'block' }} />
+                <div className="section-label" style={{ color: '#F0D16E' }}>
+                  <span style={{ width: 32, height: 2, background: '#F0D16E', borderRadius: 2, display: 'block' }} />
                   Our Story
                 </div>
                 <h1 className="text-h1" style={{ color: 'white', marginTop: 16, marginBottom: 24 }}>
                   20 Years of Building<br />
-                  <span style={{ color: '#45BBFF' }}>Better Homes</span>
+                  <span style={{ color: '#F0D16E' }}>Better Homes</span>
                 </h1>
                 <p style={{ color: 'rgba(255,255,255,0.75)', lineHeight: 1.8, fontSize: '1rem', marginBottom: 20 }}>
                   Founded in 2005, ClearVista started with a simple belief: every Indian home deserves windows and doors that are beautiful, durable, and energy-efficient.
@@ -77,7 +77,7 @@ export default function AboutPage() {
                     border: '1px solid rgba(255,255,255,0.1)', borderRadius: 16,
                     padding: '28px 20px', textAlign: 'center',
                   }}>
-                    <div style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800, fontSize: '2.5rem', color: '#45BBFF', lineHeight: 1 }}>
+                    <div style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800, fontSize: '2.5rem', color: '#F0D16E', lineHeight: 1 }}>
                       {s.n}
                     </div>
                     <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem', marginTop: 8 }}>{s.l}</p>
@@ -94,14 +94,14 @@ export default function AboutPage() {
             <div className="mission-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48 }}>
               <div style={{ padding: '48px', background: '#F0F7FF', borderRadius: 20, border: '1px solid #DBEAFE' }}>
                 <div style={{ fontSize: '2rem', marginBottom: 20 }}>🎯</div>
-                <h2 style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800, fontSize: '1.5rem', color: '#0057B8', marginBottom: 16 }}>Our Mission</h2>
+                <h2 style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800, fontSize: '1.5rem', color: '#C8A05C', marginBottom: 16 }}>Our Mission</h2>
                 <p style={{ color: '#475569', lineHeight: 1.8 }}>
                   To manufacture and deliver the highest quality uPVC windows and doors that transform homes across India — combining European engineering with Indian innovation to create products that are beautiful, durable, and accessible to every Indian household.
                 </p>
               </div>
               <div style={{ padding: '48px', background: '#F0F7FF', borderRadius: 20, border: '1px solid #DBEAFE' }}>
                 <div style={{ fontSize: '2rem', marginBottom: 20 }}>🌟</div>
-                <h2 style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800, fontSize: '1.5rem', color: '#009FE3', marginBottom: 16 }}>Our Vision</h2>
+                <h2 style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800, fontSize: '1.5rem', color: '#D4AF37', marginBottom: 16 }}>Our Vision</h2>
                 <p style={{ color: '#475569', lineHeight: 1.8 }}>
                   To be India&apos;s most trusted and innovative uPVC solutions company by 2030 — setting new standards in energy efficiency, design, and customer experience, while contributing to a sustainable built environment across India.
                 </p>
@@ -123,7 +123,7 @@ export default function AboutPage() {
                 return (
                   <div key={v.title} style={{ textAlign: 'center', padding: '32px 24px', background: 'white', borderRadius: 16, border: '1px solid #E2E8F0', boxShadow: '0 2px 10px rgba(0,0,0,0.04)' }}>
                     <div style={{ width: 60, height: 60, borderRadius: 16, background: 'linear-gradient(135deg, #EFF6FF, #DBEAFE)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px' }}>
-                      <Icon size={28} color="#0057B8" strokeWidth={1.8} />
+                      <Icon size={28} color="#C8A05C" strokeWidth={1.8} />
                     </div>
                     <h3 style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 700, fontSize: '1rem', color: '#0F172A', marginBottom: 12 }}>{v.title}</h3>
                     <p style={{ color: '#64748B', fontSize: '0.85rem', lineHeight: 1.7 }}>{v.desc}</p>
@@ -138,17 +138,17 @@ export default function AboutPage() {
         <section style={{ padding: '100px 0', background: 'var(--color-darkbase)', overflow: 'hidden' }}>
           <div className="container">
             <div style={{ textAlign: 'center', marginBottom: 64 }}>
-              <div className="section-label" style={{ justifyContent: 'center', color: '#45BBFF' }}>
-                <span style={{ width: 32, height: 2, background: '#45BBFF', borderRadius: 2, display: 'block' }} />
+              <div className="section-label" style={{ justifyContent: 'center', color: '#F0D16E' }}>
+                <span style={{ width: 32, height: 2, background: '#F0D16E', borderRadius: 2, display: 'block' }} />
                 Our Journey
               </div>
               <h2 className="text-h2" style={{ color: 'white', marginTop: 12 }}>
-                20 Years of <span style={{ color: '#45BBFF' }}>Milestones</span>
+                20 Years of <span style={{ color: '#F0D16E' }}>Milestones</span>
               </h2>
             </div>
             <div style={{ position: 'relative', maxWidth: 800, margin: '0 auto' }}>
               {/* Timeline line */}
-              <div style={{ position: 'absolute', left: '50%', top: 0, bottom: 0, width: 2, background: 'rgba(0,159,227,0.3)', transform: 'translateX(-50%)' }} />
+              <div style={{ position: 'absolute', left: '50%', top: 0, bottom: 0, width: 2, background: 'rgba(212, 175, 55,0.3)', transform: 'translateX(-50%)' }} />
               {milestones.map((m, i) => (
                 <div key={m.year} style={{
                   display: 'flex', justifyContent: i % 2 === 0 ? 'flex-start' : 'flex-end',
@@ -157,8 +157,8 @@ export default function AboutPage() {
                   {/* Dot */}
                   <div style={{
                     position: 'absolute', left: '50%', top: 20, transform: 'translate(-50%, -50%)',
-                    width: 14, height: 14, borderRadius: '50%', background: '#009FE3',
-                    boxShadow: '0 0 0 4px rgba(0,159,227,0.2)', zIndex: 1,
+                    width: 14, height: 14, borderRadius: '50%', background: '#D4AF37',
+                    boxShadow: '0 0 0 4px rgba(212, 175, 55,0.2)', zIndex: 1,
                   }} />
                   <div style={{
                     width: '44%',
@@ -166,7 +166,7 @@ export default function AboutPage() {
                     border: '1px solid rgba(255,255,255,0.08)',
                     borderRadius: 12, padding: '20px 24px',
                   }}>
-                    <span style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800, fontSize: '1.5rem', color: '#009FE3' }}>{m.year}</span>
+                    <span style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800, fontSize: '1.5rem', color: '#D4AF37' }}>{m.year}</span>
                     <p style={{ color: 'rgba(255,255,255,0.7)', marginTop: 8, fontSize: '0.9rem', lineHeight: 1.6 }}>{m.event}</p>
                   </div>
                 </div>
@@ -224,7 +224,7 @@ export default function AboutPage() {
               {/* Text */}
               <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '32px 24px', background: '#F0F7FF', borderRadius: 20 }}>
                 <div className="section-label">Our People</div>
-                <h3 style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800, fontSize: '1.8rem', color: '#0057B8', marginTop: 12, marginBottom: 16 }}>
+                <h3 style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800, fontSize: '1.8rem', color: '#C8A05C', marginTop: 12, marginBottom: 16 }}>
                   500+ Skilled Professionals
                 </h3>
                 <p style={{ color: '#475569', lineHeight: 1.8, fontSize: '0.95rem', marginBottom: 20 }}>
@@ -238,7 +238,7 @@ export default function AboutPage() {
                     { n: '100+', l: 'Support Staff' },
                   ].map((s) => (
                     <div key={s.l} style={{ background: 'white', borderRadius: 12, padding: '16px', border: '1px solid #DBEAFE' }}>
-                      <div style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800, fontSize: '1.5rem', color: '#009FE3' }}>{s.n}</div>
+                      <div style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800, fontSize: '1.5rem', color: '#D4AF37' }}>{s.n}</div>
                       <p style={{ color: '#64748B', fontSize: '0.8rem', marginTop: 4 }}>{s.l}</p>
                     </div>
                   ))}

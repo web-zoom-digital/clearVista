@@ -78,7 +78,7 @@ export default function Testimonials() {
         position: 'absolute', top: '50%', left: '50%',
         transform: 'translate(-50%, -50%)',
         width: '60vw', height: '60vw',
-        background: 'radial-gradient(circle, rgba(0,87,184,0.08) 0%, transparent 70%)',
+        background: 'radial-gradient(circle, rgba(200, 160, 92,0.08) 0%, transparent 70%)',
         pointerEvents: 'none',
       }} />
 
@@ -86,13 +86,13 @@ export default function Testimonials() {
         {/* Header */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 56, flexWrap: 'wrap', gap: 24 }}>
           <div>
-            <div className="section-label" style={{ color: '#45BBFF' }}>
-              <span style={{ width: 32, height: 2, background: '#45BBFF', borderRadius: 2, display: 'block' }} />
+            <div className="section-label" style={{ color: '#F0D16E' }}>
+              <span style={{ width: 32, height: 2, background: '#F0D16E', borderRadius: 2, display: 'block' }} />
               Customer Stories
             </div>
             <h2 className="text-h2" style={{ color: 'white', marginTop: 12 }}>
               What Our Customers{' '}
-              <span style={{ color: '#45BBFF' }}>Say</span>
+              <span style={{ color: '#F0D16E' }}>Say</span>
             </h2>
           </div>
 
@@ -103,7 +103,7 @@ export default function Testimonials() {
               display: 'flex', alignItems: 'center', justifyContent: 'center',
               transition: 'all 0.2s ease',
             }}
-              onMouseEnter={(e) => { e.currentTarget.style.background = '#0057B8'; e.currentTarget.style.borderColor = '#0057B8'; }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = '#C8A05C'; e.currentTarget.style.borderColor = '#C8A05C'; }}
               onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.05)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)'; }}
             >
               <ChevronLeft size={20} />
@@ -114,7 +114,7 @@ export default function Testimonials() {
               display: 'flex', alignItems: 'center', justifyContent: 'center',
               transition: 'all 0.2s ease',
             }}
-              onMouseEnter={(e) => { e.currentTarget.style.background = '#0057B8'; e.currentTarget.style.borderColor = '#0057B8'; }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = '#C8A05C'; e.currentTarget.style.borderColor = '#C8A05C'; }}
               onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.05)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)'; }}
             >
               <ChevronRight size={20} />
@@ -138,7 +138,7 @@ export default function Testimonials() {
               {/* Quote icon */}
               <div style={{
                 position: 'absolute', top: 24, right: 24,
-                color: 'rgba(0,159,227,0.2)',
+                color: 'rgba(212, 175, 55,0.2)',
               }}>
                 <Quote size={40} />
               </div>
@@ -163,7 +163,7 @@ export default function Testimonials() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={t.image} alt={t.name} style={{
                   width: 48, height: 48, borderRadius: '50%', objectFit: 'cover',
-                  border: '2px solid rgba(0,159,227,0.4)',
+                  border: '2px solid rgba(212, 175, 55,0.4)',
                 }} />
                 <div>
                   <p style={{ color: 'white', fontWeight: 700, fontFamily: 'Outfit, sans-serif', fontSize: '0.95rem', marginBottom: 2 }}>{t.name}</p>
@@ -179,7 +179,7 @@ export default function Testimonials() {
           {testimonials.map((_, i) => (
             <button key={i} onClick={() => setCurrent(i)} aria-label={`Go to testimonial ${i + 1}`} style={{
               width: i === current ? 24 : 8, height: 8, borderRadius: 4, border: 'none',
-              background: i === current ? '#009FE3' : 'rgba(255,255,255,0.2)',
+              background: i === current ? '#D4AF37' : 'rgba(255,255,255,0.2)',
               cursor: 'pointer', transition: 'all 0.3s ease', padding: 0,
             }} />
           ))}

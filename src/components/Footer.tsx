@@ -38,10 +38,10 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer style={{ background: '#06101F', color: 'rgba(255,255,255,0.7)', fontFamily: 'Inter, sans-serif' }}>
+    <footer style={{ background: '#0a0a0a', color: 'rgba(255,255,255,0.7)', fontFamily: 'Inter, sans-serif' }}>
       {/* CTA Banner */}
       <div style={{
-        background: 'linear-gradient(135deg, #0057B8 0%, #009FE3 100%)',
+        background: 'linear-gradient(135deg, #C8A05C 0%, #D4AF37 100%)',
         padding: '60px 0',
       }}>
         <div className="container cta-banner-flex" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 24 }}>
@@ -77,23 +77,44 @@ export default function Footer() {
         <div className="footer-main-grid" style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', gap: 48, marginBottom: 56 }}>
           {/* Brand Column */}
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 20 }}>
-              <div style={{
-                width: 36, height: 36, borderRadius: 8,
-                background: 'linear-gradient(135deg, #0057B8, #009FE3)',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-              }}>
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                  <rect x="3" y="3" width="8" height="8" rx="1" fill="white" opacity="0.9"/>
-                  <rect x="13" y="3" width="8" height="8" rx="1" fill="white" opacity="0.6"/>
-                  <rect x="3" y="13" width="8" height="8" rx="1" fill="white" opacity="0.6"/>
-                  <rect x="13" y="13" width="8" height="8" rx="1" fill="white" opacity="0.9"/>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#C8A05C' }}>
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M5 21V10C5 6.134 8.134 3 12 3C15.866 3 19 6.134 19 10V21" strokeLinecap="round" />
+                  <path d="M12 10V21" strokeLinecap="round" />
+                  <circle cx="9" cy="16" r="1.5" fill="currentColor" stroke="none" />
                 </svg>
               </div>
-              <span style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800, fontSize: '1.4rem', color: 'white' }}>
-                Clear<span style={{ color: '#009FE3' }}>Vista</span>
-              </span>
+              <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                <span style={{
+                  fontFamily: 'Outfit, sans-serif',
+                  fontWeight: 800,
+                  fontSize: '1.8rem',
+                  color: '#C8A05C',
+                  letterSpacing: '-0.02em',
+                  lineHeight: 1,
+                }}>
+                  ClearVista
+                </span>
+                <span style={{
+                  fontSize: '0.75rem',
+                  fontWeight: 600,
+                  letterSpacing: '0.15em',
+                  color: 'rgba(255,255,255,0.8)',
+                  marginTop: 4,
+                }}>
+                  DOORS & WINDOWS
+                </span>
+              </div>
             </div>
+            
+            <div style={{ 
+              color: '#C8A05C', fontFamily: 'Outfit, sans-serif', fontStyle: 'italic',
+              fontWeight: 500, fontSize: '1.1rem', marginBottom: 20
+            }}>
+              Beyond the View
+            </div>
+
             <p style={{ lineHeight: 1.8, fontSize: '0.9rem', marginBottom: 24, maxWidth: 280 }}>
               India&apos;s trusted manufacturer of premium uPVC windows and doors. Engineering comfort, security, and beauty for every home.
             </p>
@@ -104,16 +125,16 @@ export default function Footer() {
                 onMouseEnter={(e) => (e.currentTarget.style.color = 'white')}
                 onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255,255,255,0.7)')}
               >
-                <Phone size={15} color="#009FE3" /> +91 98717 70357
+                <Phone size={15} color="#D4AF37" /> +91 98717 70357
               </a>
               <a href="mailto:clearvistadoors@gmail.com" style={{ display: 'flex', alignItems: 'center', gap: 10, color: 'rgba(255,255,255,0.7)', textDecoration: 'none', fontSize: '0.88rem', transition: 'color 0.2s' }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = 'white')}
                 onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255,255,255,0.7)')}
               >
-                <Mail size={15} color="#009FE3" /> clearvistadoors@gmail.com
+                <Mail size={15} color="#D4AF37" /> clearvistadoors@gmail.com
               </a>
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10, fontSize: '0.88rem' }}>
-                <MapPin size={15} color="#009FE3" style={{ marginTop: 2, flexShrink: 0 }} />
+                <MapPin size={15} color="#D4AF37" style={{ marginTop: 2, flexShrink: 0 }} />
                 <span>36 Jagat Narain Road, Golaganj, Lucknow, UP 226018</span>
               </div>
             </div>
@@ -132,7 +153,7 @@ export default function Footer() {
                       color: 'rgba(255,255,255,0.55)', textDecoration: 'none', fontSize: '0.87rem',
                       transition: 'color 0.2s ease', display: 'inline-block',
                     }}
-                      onMouseEnter={(e) => { e.currentTarget.style.color = '#009FE3'; }}
+                      onMouseEnter={(e) => { e.currentTarget.style.color = '#D4AF37'; }}
                       onMouseLeave={(e) => { e.currentTarget.style.color = 'rgba(255,255,255,0.55)'; }}
                     >
                       {link.label}
@@ -154,7 +175,7 @@ export default function Footer() {
             <div>© {new Date().getFullYear()} ClearVista. All rights reserved.</div>
             <div>
               Designed, Developed & SEO Managed by{' '}
-              <a href="https://www.zoomdigital.in/" target="_blank" rel="noopener noreferrer" style={{ color: '#009FE3', textDecoration: 'none', fontWeight: 600 }}>
+              <a href="https://www.zoomdigital.in/" target="_blank" rel="noopener noreferrer" style={{ color: '#D4AF37', textDecoration: 'none', fontWeight: 600 }}>
                 Zoom Digital
               </a>
             </div>
@@ -170,8 +191,8 @@ export default function Footer() {
                 transition: 'all 0.2s ease',
               }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.background = '#0057B8';
-                  e.currentTarget.style.borderColor = '#0057B8';
+                  e.currentTarget.style.background = '#C8A05C';
+                  e.currentTarget.style.borderColor = '#C8A05C';
                   e.currentTarget.style.color = 'white';
                 }}
                 onMouseLeave={(e) => {

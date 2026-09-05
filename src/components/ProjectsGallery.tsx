@@ -63,7 +63,7 @@ export default function ProjectsGallery({ limit }: { limit?: number }) {
               transition: 'all 0.25s ease',
               background: activeFilter === cat ? 'var(--color-primary)' : '#F1F5F9',
               color: activeFilter === cat ? 'white' : '#64748B',
-              boxShadow: activeFilter === cat ? '0 4px 12px rgba(0,87,184,0.25)' : 'none',
+              boxShadow: activeFilter === cat ? '0 4px 12px rgba(200, 160, 92,0.25)' : 'none',
             }}>
               {cat}
             </button>
@@ -98,8 +98,8 @@ export default function ProjectsGallery({ limit }: { limit?: number }) {
               <div style={{
                 position: 'absolute', inset: 0,
                 background: hovered === project.id
-                  ? 'linear-gradient(to top, rgba(10,15,30,0.9) 0%, rgba(10,15,30,0.3) 60%, transparent 100%)'
-                  : 'linear-gradient(to top, rgba(10,15,30,0.7) 0%, transparent 60%)',
+                  ? 'linear-gradient(to top, rgba(10, 10, 10,0.9) 0%, rgba(10, 10, 10,0.3) 60%, transparent 100%)'
+                  : 'linear-gradient(to top, rgba(10, 10, 10,0.7) 0%, transparent 60%)',
                 transition: 'background 0.4s ease',
               }} />
 
@@ -110,9 +110,9 @@ export default function ProjectsGallery({ limit }: { limit?: number }) {
               }}>
                 <span style={{
                   display: 'inline-block', padding: '3px 10px', borderRadius: 100,
-                  background: 'rgba(0,159,227,0.3)', backdropFilter: 'blur(4px)',
-                  border: '1px solid rgba(0,159,227,0.4)',
-                  color: '#45BBFF', fontSize: '0.72rem', fontWeight: 600,
+                  background: 'rgba(212, 175, 55,0.3)', backdropFilter: 'blur(4px)',
+                  border: '1px solid rgba(212, 175, 55,0.4)',
+                  color: '#F0D16E', fontSize: '0.72rem', fontWeight: 600,
                   letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: 8,
                 }}>
                   {project.category}

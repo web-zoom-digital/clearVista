@@ -78,12 +78,12 @@ export default function WindowsPage() {
       <main>
         {/* Hero */}
         <section style={{
-          background: 'linear-gradient(135deg, #0A0F1E 0%, #0D1526 100%)',
+          background: 'linear-gradient(135deg, #0A0A0A 0%, #111111 100%)',
           padding: '160px 0 100px', position: 'relative', overflow: 'hidden',
         }}>
           <div style={{
             position: 'absolute', top: 0, right: 0, width: '50%', height: '100%',
-            background: 'radial-gradient(ellipse at top right, rgba(0,87,184,0.2) 0%, transparent 60%)',
+            background: 'radial-gradient(ellipse at top right, rgba(200, 160, 92,0.2) 0%, transparent 60%)',
             pointerEvents: 'none',
           }} />
           <div className="container" style={{ position: 'relative', zIndex: 1 }}>
@@ -91,15 +91,15 @@ export default function WindowsPage() {
             <div style={{ display: 'flex', gap: 8, alignItems: 'center', marginBottom: 32 }}>
               <Link href="/" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none', fontSize: '0.85rem' }}>Home</Link>
               <span style={{ color: 'rgba(255,255,255,0.25)' }}>›</span>
-              <span style={{ color: '#45BBFF', fontSize: '0.85rem', fontWeight: 500 }}>Windows</span>
+              <span style={{ color: '#F0D16E', fontSize: '0.85rem', fontWeight: 500 }}>Windows</span>
             </div>
-            <div className="section-label" style={{ color: '#45BBFF' }}>
-              <span style={{ width: 32, height: 2, background: '#45BBFF', borderRadius: 2, display: 'block' }} />
+            <div className="section-label" style={{ color: '#F0D16E' }}>
+              <span style={{ width: 32, height: 2, background: '#F0D16E', borderRadius: 2, display: 'block' }} />
               uPVC Windows Collection
             </div>
             <h1 className="text-h1" style={{ color: 'white', marginTop: 16, marginBottom: 20 }}>
               Windows Designed for<br />
-              <span style={{ color: '#45BBFF' }}>Your Every Need</span>
+              <span style={{ color: '#F0D16E' }}>Your Every Need</span>
             </h1>
             <p className="text-h4" style={{ color: 'rgba(255,255,255,0.7)', maxWidth: 600, fontWeight: 400, marginBottom: 36 }}>
               From sleek sliding windows to architectural bay windows — explore our complete range of precision-engineered uPVC windows.
@@ -125,7 +125,7 @@ export default function WindowsPage() {
                     <span style={{
                       position: 'absolute', top: 16, left: 16,
                       padding: '4px 12px', borderRadius: 100,
-                      background: '#0057B8', color: 'white',
+                      background: '#C8A05C', color: 'white',
                       fontSize: '0.75rem', fontWeight: 600, fontFamily: 'Outfit, sans-serif',
                     }}>
                       {win.badge}
@@ -142,7 +142,7 @@ export default function WindowsPage() {
                     <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 24px', display: 'flex', flexDirection: 'column', gap: 8 }}>
                       {win.features.map((f) => (
                         <li key={f} style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: '0.85rem', color: '#475569' }}>
-                          <Check size={14} color="#009FE3" strokeWidth={2.5} />
+                          <Check size={14} color="#D4AF37" strokeWidth={2.5} />
                           {f}
                         </li>
                       ))}

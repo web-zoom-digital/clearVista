@@ -8,7 +8,7 @@ const slides = [
   {
     id: 1,
     image: '/images/hero-1.jpg',
-    badge: 'Premium uPVC Solutions',
+    badge: 'Beyond the View',
     title: 'Let Light In',
     titleAccent: 'Beautifully',
     subtitle: 'Precision-engineered uPVC windows and doors crafted for every vision',
@@ -18,7 +18,7 @@ const slides = [
   {
     id: 2,
     image: '/images/hero-2.jpg',
-    badge: 'Elegant Doors Collection',
+    badge: 'Beyond the View',
     title: 'Open to New',
     titleAccent: 'Possibilities',
     subtitle: 'Secure, stylish, and built to last — our doors redefine first impressions',
@@ -28,7 +28,7 @@ const slides = [
   {
     id: 3,
     image: '/images/hero-3.jpg',
-    badge: 'Energy Efficient Technology',
+    badge: 'Beyond the View',
     title: 'Built for',
     titleAccent: 'Tomorrow',
     subtitle: 'Double-glazed, thermally insulated uPVC that reduces noise and saves energy',
@@ -63,14 +63,17 @@ export default function HeroSlider() {
   }, [current]);
 
   useEffect(() => {
-    setProgress(0);
-    const start = Date.now();
+    let start = Date.now();
     const tick = () => {
       const elapsed = Date.now() - start;
       setProgress(Math.min((elapsed / SLIDE_DURATION) * 100, 100));
       if (elapsed < SLIDE_DURATION) progressRef.current = setTimeout(tick, 30);
     };
-    progressRef.current = setTimeout(tick, 30);
+    progressRef.current = setTimeout(() => {
+      setProgress(0);
+      start = Date.now();
+      tick();
+    }, 0);
     return () => { if (progressRef.current) clearTimeout(progressRef.current); };
   }, [current]);
 
@@ -111,13 +114,13 @@ export default function HeroSlider() {
           <div key={`badge-${current}`} style={{
             display: 'inline-flex', alignItems: 'center', gap: 8,
             padding: '6px 16px', borderRadius: 100,
-            background: 'rgba(0,159,227,0.25)', backdropFilter: 'blur(8px)',
-            border: '1px solid rgba(0,159,227,0.4)',
+            background: 'rgba(212, 175, 55,0.25)', backdropFilter: 'blur(8px)',
+            border: '1px solid rgba(212, 175, 55,0.4)',
             marginBottom: 24,
             animation: 'fadeInUp 0.6s ease both',
           }}>
-            <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#009FE3', display: 'block' }} />
-            <span style={{ color: '#45BBFF', fontSize: '0.82rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', fontFamily: 'Outfit, sans-serif' }}>
+            <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#D4AF37', display: 'block' }} />
+            <span style={{ color: '#F0D16E', fontSize: '0.82rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', fontFamily: 'Outfit, sans-serif' }}>
               {slide.badge}
             </span>
           </div>
@@ -128,7 +131,7 @@ export default function HeroSlider() {
             animation: 'fadeInUp 0.7s 0.1s ease both',
           }}>
             {slide.title}{' '}
-            <span style={{ color: '#45BBFF' }}>{slide.titleAccent}</span>
+            <span style={{ color: '#F0D16E' }}>{slide.titleAccent}</span>
           </h1>
 
           {/* Subtitle */}
@@ -185,7 +188,7 @@ export default function HeroSlider() {
           </span>
           <div style={{ width: 80, height: 2, background: 'rgba(255,255,255,0.25)', borderRadius: 2, overflow: 'hidden' }}>
             <div style={{
-              height: '100%', background: '#009FE3', borderRadius: 2,
+              height: '100%', background: '#D4AF37', borderRadius: 2,
               width: `${progress}%`, transition: 'width 0.05s linear',
             }} />
           </div>
